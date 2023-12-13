@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Style/utilities.css">
-    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../style/utilities.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <header class="entete bg-color">
         <nav class="navbar">
-            <a class="left" href="index.html"><img src="../Images/logo.png" alt="Logo du site web"></a>
+            <a class="left" href="index.php"><img src="../Images/logo.png" alt="Logo du site web"></a>
             <ul class="mid">
                 <li class="liste"><a href="#">Accueil</a></li>
                 <li class="liste"><a href="#">Map</a></li>
