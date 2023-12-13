@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/utilities.css">
     <link rel="stylesheet" href="../style/style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">    <title>Document</title>
 </head>
 
 <body>
     <header class="entete bg-color">
         <nav class="navbar">
-            <a class="left" href="index.php"><img src="../Images/logo.png" alt="Logo du site web"></a>
+            <a class="left" href="index.php"><img src="../images/logo.png" alt="Logo du site web"></a>
             <ul class="mid">
                 <li class="liste"><a href="#">Accueil</a></li>
                 <li class="liste"><a href="#">Map</a></li>
@@ -32,12 +32,14 @@
             
             <!-- Balise "Se connecter" -->
             <div class="right">
-                <a href="#" class="open-modal">Se connecter</a>
+                <a href="#" class="open-modal"><img src="../images/connexion-logo.svg" alt="Connexion">Se connecter</a>
             </div>
         </nav>
     </header>
-    <footer>
 
+
+    <footer>
+        <p>© 2023 Red Line Defense, Inc. Tous droits réservés.</p>
     </footer>
 </body>
 

@@ -3,33 +3,6 @@
     padding: 0;
 }
 
-.entete a {
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-.entete img {
-    margin: 10px 0px 0px 25px;
-    width: 324px;
-    height: 60px;
-}
-
-.bg-color {
-    background-color: var(--primary-color);
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-}
-
-.navbar ul {
-    display: flex;
-}
-
-.liste {
-    margin-left: 10px;
-}
 
 /* style du modal */
 .modal {
@@ -64,4 +37,75 @@
     color: #fff;
     /* Couleur de fermeture du texte blanc */
     cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*----------------------------------------- NAVBAR ----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.entete a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.entete img {
+    width: 315px;
+}
+
+.bg-color {
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 13px;
+    font-family: 'Krona One', sans-serif;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.55);
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+.navbar .right a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .right a {
+    color: #FFF166;
+}
+
+.navbar .right img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*----------------------------------------- FOOTER ----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+footer {
+    height: 50px;
+    background-color: #181818;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    line-height: 50px;
+    font-family: 'Open Sans', sans-serif;
 }
