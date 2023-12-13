@@ -7,6 +7,8 @@ class Connexion {
     protected static $dbuser = "dutinfopw201613";
     protected static $dbpasswd = "hymunupy";
 
+    public function __construct() {}
+
     public static function initConnexion() {
         try {
             self::$bdd = new PDO('mysql:host=' . self::$dbhost . ';dbname=' . self::$dbname . ";charset=utf8;", self::$dbuser, self::$dbpasswd);
@@ -15,5 +17,9 @@ class Connexion {
         catch(PDOException $Exception) {
             echo $Exception->getMessage();
         }
+    }
+
+    public static function getBdd(){
+        return Connexion::$bdd;
     }
 }

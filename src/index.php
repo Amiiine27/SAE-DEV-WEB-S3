@@ -3,6 +3,12 @@
 
     session_start();
 
-    Connexion::initConnexion();
+define('MY_APP', true);
 
-    include_once 'template.php';
+if (!defined('MY_APP')) {
+    die("Accès interdit");
+}
+
+
+Connexion::initConnexion();
+include_once 'template.php';

@@ -32,7 +32,7 @@
             
             <!-- Balise "Se connecter" -->
             <div class="right">
-                <a href="#" class="open-modal">Se connecter</a>
+                <a href="index.php?module=connexion&action=form_connexion" class="open-modal">Se connecter</a>
             </div>
         </nav>
     </header>
