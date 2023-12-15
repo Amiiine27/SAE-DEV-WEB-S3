@@ -1,3 +1,4 @@
+<?php global $tampon ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +41,9 @@
     </nav>
 </header>
 
+<main>
+    <?php echo $tampon; ?>
+</main>
 
 <footer>
     <p>© 2023 Red Line Defense, Inc. Tous droits réservés.</p>
