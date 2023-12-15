@@ -18,8 +18,12 @@
     <nav class="navigation-bar">
         <a class="left" href="index.php"><img src="../images/logo.png" alt="Logo du site web"></a>
         <ul class="mid">
-            <li class="liste"><a href="#">Accueil</a></li>
-            <li class="liste"><a href="#">Map</a></li>
+            <li class="liste"><a href="index.php?module=home&action=welcome"
+                                 class="<?php echo !isset($_GET['module']) || $_GET['module'] == 'home' ? 'link_active' : '' ?>">Accueil</a>
+            </li>
+            <li class="liste"><a href="index.php?module=map&action=main-map"
+                                 class="<?php echo isset($_GET['module']) && $_GET['module'] == 'map' ? 'link_active' : '' ?>">Map</a>
+            </li>
             <li class="liste"><a href="#">Shop</a></li>
             <li class="liste"><a href="#">Equipage</a></li>
             <li class="liste"><a href="#">Encyclopédie</a></li>

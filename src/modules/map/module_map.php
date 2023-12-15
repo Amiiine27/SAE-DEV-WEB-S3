@@ -1,18 +1,19 @@
 <?php
 
-include_once 'controller_home.php';
+include_once 'controller_map.php';
 
-class ModuleHome
+class ModuleMap
 {
     private $controller;
 
     public function __construct()
     {
-        $this->controller = new ControllerHome();
+        $this->controller = new ControllerMap();
 
         switch ($this->controller->getAction()) {
-            case 'welcome':
-                $this->controller->welcome();
+            case 'main-map':
+                $this->controller->mainMap();
+                break;
         }
     }
 

@@ -6,14 +6,18 @@ session_start();
 
 Connexion::initConnexion();
 
-$module = isset($_GET['module']) ? $_GET['module'] : 'accueil';
+$module = isset($_GET['module']) ? $_GET['module'] : 'home';
 $moduleClass = '';
 $moduleFile = '';
 
 switch ($module) {
-    case 'accueil':
+    case 'home':
         $moduleFile = './modules/home/module_home.php';
-        $moduleClass = 'ModHome';
+        $moduleClass = 'ModuleHome';
+        break;
+    case 'map':
+        $moduleFile = './modules/map/module_map.php';
+        $moduleClass = 'ModuleMap';
         break;
 }
 
