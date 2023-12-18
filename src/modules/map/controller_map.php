@@ -1,16 +1,19 @@
 <?php
 
-include_once 'vue_map.php';
+require_once 'vue_map.php';
+require_once 'model_map.php';
 
 class ControllerMap
 {
-    private $action;
-    private $vue;
+    private string $action;
+    private VueMap $vue;
+    private ModelMap $model;
 
     public function __construct()
     {
         $this->vue = new VueMap();
-        $this->action = isset($_GET['action']) ? $_GET['action'] : 'main-map';
+        $this->model = new ModelMap();
+        $this->action = $_GET['action'] ?? 'main-map';
     }
 
     public function getAction()
@@ -23,8 +26,13 @@ class ControllerMap
         return $this->vue->getAffichage();
     }
 
-    public function mainMap()
+    public function mainMap(): void
     {
-        $this->vue->mainMap();
+        $this->vue->mainMap($this->getMaps());
+    }
+
+    public function getMaps(): array
+    {
+        return $this->model->getMaps();
     }
 }

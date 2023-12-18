@@ -9,7 +9,7 @@ class ControllerHome
 
     public function __construct()
     {
-        $this->action = isset($_GET['action']) ? $_GET['action'] : "welcome";
+        $this->action = $_GET['action'] ?? "welcome";
         $this->vue = new VueHome();
     }
 

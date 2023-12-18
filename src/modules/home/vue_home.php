@@ -12,7 +12,7 @@ class VueHome extends VueGenerique
         ?>
         <div class="welcome">
             <video autoplay muted loop>
-                <source src="../../../images/video_one_piece.mp4" type="video/mp4"/>
+                <source src="../images/home/video_one_piece.mp4" type="video/mp4"/>
             </video>
             <div class="welcome_text">
                 <h1>Red Line Defense</h1>

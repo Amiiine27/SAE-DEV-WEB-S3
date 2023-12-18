@@ -9,6 +9,7 @@ class ModuleMap
     public function __construct()
     {
         $this->controller = new ControllerMap();
+        $this->controller->getMaps();
 
         switch ($this->controller->getAction()) {
             case 'main-map':
