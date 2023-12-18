@@ -176,8 +176,84 @@ footer p {
 
 .map {
     padding-top: 64px; /* 64px = hauteur de la navbar */
+    display: flex;
     height: 100%;
+    width: 100%;
+    background-color: black;
 }
+
+.map .map_card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: width 0.2s ease-in-out;
+}
+
+.map .map_card:hover {
+    width: 115%;
+}
+
+.map .map_card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: opacity(15%);
+    cursor: pointer;
+    overflow: hidden;
+    transition: filter 0.2s ease-in-out;
+}
+
+.map .map_card:hover img {
+    filter: opacity(1);
+}
+
+.map .map_card .map_image_shadow {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.map .map_card:hover .map_image_shadow {
+    opacity: 1;
+}
+
+.map .map_card .map_image_shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.map .map_card .map_text {
+    position: absolute;
+    z-index: 2;
+    top: 60%;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.map .map_card .map_text h2 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 48px;
+    font-family: 'Krona One', sans-serif;
+}
+
+.map .map_card .map_text .map_biographie_title {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 32px;
+    font-family: 'Krona One', sans-serif;
+}
+
+.map .map_card .map_text .map_biographie {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
 
 /*-----------------------------------------------------------------------------------------*/
 /*--------------------------------------- RESPONSIVE --------------------------------------*/
@@ -207,5 +283,20 @@ footer p {
 
     .welcome .welcome_text h2 {
         font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .map {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .map .map_card:hover {
+        width: 100%;
+    }
+
+    .map .map_card {
+        height: 100vh;
     }
 }

@@ -6,7 +6,7 @@ session_start();
 
 Connexion::initConnexion();
 
-$module = isset($_GET['module']) ? $_GET['module'] : 'home';
+$module = $_GET['module'] ?? 'home';
 $moduleClass = '';
 $moduleFile = '';
 
