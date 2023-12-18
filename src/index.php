@@ -19,6 +19,10 @@ switch ($module) {
         $moduleFile = './modules/map/module_map.php';
         $moduleClass = 'ModuleMap';
         break;
+        case 'connexion':
+            $moduleFile = './modules/connexion/module_connexion.php';
+            $moduleClass = 'ModConnexion';
+            break;
 }
 
 if (file_exists($moduleFile)) {

@@ -40,7 +40,8 @@
 
         <!-- Balise "Se connecter" -->
         <div class="right">
-            <a href="#" class="open-modal"><img src="../images/connexion-logo.svg" alt="Connexion">Se connecter</a>
+            <!--<a href="#" class="open-modal"><img src="../images/connexion-logo.svg" alt="Connexion">Se connecter</a> -->
+            <a href="index.php?module=connexion&action=connexion">Se connecter</a>
         </div>
     </nav>
 </header>
