@@ -2,6 +2,7 @@
 
 
 require_once 'vue_generique.php';
+
 class VueConnexion extends VueGenerique{
     
         public function __construct(){
@@ -22,7 +23,6 @@ class VueConnexion extends VueGenerique{
                     <button type='submit' name='submit'>Se connecter</button>
                     <a href='#'>S'inscrire</a>
                 </form>
-                
                 </div> 
             </div>
 

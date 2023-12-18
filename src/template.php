@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="../style/utilities.css">
     <link rel="stylesheet" href="../style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,17 +32,25 @@
         </ul>
         <!-- Modal -->
         <div id="myModal" class="modal">
-            <div class="modal-content">
+            <div id="modConnexion" class="modal-content">
+                <h1 class="titleMod">Connexion</h1>
+                <form action='index.php?module=connexion&action=connexion' method='post'>
+                    <input  name='login' type='text' maxlength='20' placeholder='nom utilisateur' required/>
+                    <input  name='password' type='password' placeholder='mot de passe'/></p>
+                    <a class="titleMod" href='#'>Mot de passe oublié ?</a>
+                    <div class="connexion">
+                        <button class ="buttonSubmit" type='submit' name='submit'>Se connecter</button>
+                        <a href='#'>S'inscrire</a>
+                    </div>
+                </form>
                 <span class="close" onclick="closeModal()">&times;</span>
                 <!-- Contenu du modal -->
-                <h1>Connexion</h1>
             </div>
         </div>
 
         <!-- Balise "Se connecter" -->
         <div class="right">
-            <!--<a href="#" class="open-modal"><img src="../images/connexion-logo.svg" alt="Connexion">Se connecter</a> -->
-            <a href="index.php?module=connexion&action=connexion">Se connecter</a>
+            <a href="#" class="open-modal" onclick="openModal()">Se connecter</a>
         </div>
     </nav>
 </header>
@@ -56,6 +65,54 @@
 </body>
 
 <script>
+
+//      // Fonction pour ouvrir la modal et charger le contenu
+//      function openModal(url) {
+//     console.log("ancienne url", url); 
+//     var modal = document.getElementById("myModal");
+//     var modalContent = modal.querySelector(".modal-content");
+
+//     // Extraire les paramètres module et action de l'URL
+//     var urlParts = url.split("?");
+//     if (urlParts.length === 2) {
+//         var params = urlParts[1].split("&");
+//         var module = null;
+//         var action = null;
+
+//         params.forEach(function(param) {
+//             var keyValue = param.split("=");
+//             if (keyValue.length === 2) {
+//                 if (keyValue[0] === "module") {
+//                     module = keyValue[1];
+//                 } else if (keyValue[0] === "action") {
+//                     action = keyValue[1];
+//                 }
+//             }
+//         });
+
+//         // Faire une requête AJAX pour récupérer le contenu de la page
+//         var xhr = new XMLHttpRequest();
+//         xhr.onreadystatechange = function() {
+//             if (xhr.readyState == 4 && xhr.status == 200) {
+//                 modalContent.innerHTML = xhr.responseText;
+//                 modal.style.display = "block";
+//             }
+//         };
+
+//         // Utiliser les paramètres module et action pour former la nouvelle URL
+//         var newUrl = 'index.php?module=' + module + '&action=' + action;
+//         console.log("new Url", newUrl);
+//         xhr.open("GET", newUrl, true);
+//         xhr.send();
+//     }
+// }
+
+
+//     function closeModal() {
+//         var modal = document.getElementById("myModal");
+//         modal.style.display = "none";
+//     }
+
     // Fonction pour afficher le modal
     function openModal() {
         var modal = document.getElementById("myModal");
@@ -84,6 +141,7 @@
     });
 
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

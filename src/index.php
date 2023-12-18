@@ -19,7 +19,7 @@ switch ($module) {
         $moduleFile = './modules/map/module_map.php';
         $moduleClass = 'ModuleMap';
         break;
-        case 'connexion':
+    case 'connexion':
             $moduleFile = './modules/connexion/module_connexion.php';
             $moduleClass = 'ModConnexion';
             break;
@@ -29,6 +29,8 @@ if (file_exists($moduleFile)) {
     require $moduleFile;
     $moduleClass = new $moduleClass();
 } else {
+    var_dump($moduleFile);
+    var_dump($moduleClass);
     echo "Erreur sur le module dans l'index";
 }
 
