@@ -4,21 +4,23 @@ include_once 'controller_map.php';
 
 class ModuleMap
 {
-    private $controller;
+    private ControllerMap $controller;
 
     public function __construct()
     {
         $this->controller = new ControllerMap();
-        $this->controller->getMaps();
 
         switch ($this->controller->getAction()) {
-            case 'main-map':
+            case 'main_map':
                 $this->controller->mainMap();
+                break;
+            case 'show_more':
+                $this->controller->showMore();
                 break;
         }
     }
 
-    public function displayContent()
+    public function displayContent(): false|string
     {
         return $this->controller->displayContent();
     }

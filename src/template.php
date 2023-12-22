@@ -16,12 +16,12 @@
 <body>
 <header class="entete bg-color">
     <nav class="navigation-bar">
-        <a class="left" href="index.php"><img src="../images/logo.png" alt="Logo du site web"></a>
+        <a class="left" href="index.php"><img src="../assets/logo.png" alt="Logo du site web"></a>
         <ul class="mid">
             <li class="liste"><a href="index.php?module=home&action=welcome"
                                  class="<?php echo !isset($_GET['module']) || $_GET['module'] == 'home' ? 'link_active' : '' ?>">Accueil</a>
             </li>
-            <li class="liste"><a href="index.php?module=map&action=main-map"
+            <li class="liste"><a href="index.php?module=map&action=main_map"
                                  class="<?php echo isset($_GET['module']) && $_GET['module'] == 'map' ? 'link_active' : '' ?>">Map</a>
             </li>
             <li class="liste"><a href="#">Shop</a></li>
@@ -40,7 +40,7 @@
 
         <!-- Balise "Se connecter" -->
         <div class="right">
-            <a href="#" class="open-modal"><img src="../images/connexion-logo.svg" alt="Connexion">Se connecter</a>
+            <a href="#" class="open-modal"><img src="../assets/connexion-logo.svg" alt="Connexion">Se connecter</a>
         </div>
     </nav>
 </header>

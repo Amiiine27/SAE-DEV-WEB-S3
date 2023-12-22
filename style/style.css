@@ -146,7 +146,7 @@ footer p {
 .welcome .welcome_text {
     position: absolute;
     top: 35%;
-    margin: 50px;
+    margin-left: 80px;
     color: #fff;
 }
 
@@ -254,6 +254,74 @@ footer p {
     color: #fff;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
+}
+
+
+.map_info {
+    display: flex;
+    height: 100vh;
+}
+
+.map_info .map_info_image {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.map_info .map_info_text {
+    width: 50%;
+    padding: 20px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.map_info .map_info_text h2 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 48px;
+    font-family: 'Krona One', sans-serif;
+    margin-bottom: 50px;
+}
+
+.map_info .map_info_text .map_name_title, .map_info .map_info_text .map_biographie_title {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 32px;
+    font-family: 'Krona One', sans-serif;
+}
+
+.map_info .map_info_text .map_name, .map_info .map_info_text .map_biographie {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.map_info .map_info_text .map_biographie_title {
+    margin-top: 50px;
+}
+
+.map_info .map_info_text .map_biographie {
+    margin-bottom: 100px;
+}
+
+.map_info .map_info_text hr {
+    width: 110%;
+    margin-left: -5%;
+    color: white;
+}
+
+.map_info .map_info_text .map_biographie_title {
+    margin-top: 50px;
+}
+
+.map_info .map_button_go_back {
+    position: absolute;
+    top: 150px;
+    left: 50px;
 }
 
 

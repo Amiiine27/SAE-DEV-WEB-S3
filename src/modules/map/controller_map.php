@@ -16,23 +16,23 @@ class ControllerMap
         $this->action = $_GET['action'] ?? 'main-map';
     }
 
-    public function getAction()
+    public function getAction(): string
     {
         return $this->action;
     }
 
-    public function displayContent()
+    public function displayContent(): false|string
     {
         return $this->vue->getAffichage();
     }
 
     public function mainMap(): void
     {
-        $this->vue->mainMap($this->getMaps());
+        $this->vue->mainMap($this->model->getAllMaps());
     }
 
-    public function getMaps(): array
+    public function showMore(): void
     {
-        return $this->model->getMaps();
+        $this->vue->showMore($this->model->getMap());
     }
 }
