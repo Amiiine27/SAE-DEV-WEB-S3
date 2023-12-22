@@ -40,6 +40,7 @@ class VueMap extends VueGenerique
                     <img src="../assets/left-arrow-in-circular-button-black-symbol.png" alt="">
                 </a>
                 <img class="map_info_anchor_right" src="../assets/anchor_right.png" alt="">
+                <img class="map_info_anchor_left" src="../assets/anchor_left.png" alt="">
                 <h2>Map <?php echo $mapArray['id'] ?></h2>
                 <p class="map_name_title">// Name</p>
                 <p class="map_name"><?php echo $mapArray['name'] ?></p>

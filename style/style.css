@@ -71,9 +71,54 @@
     position: fixed;
     z-index: 999;
     width: 100vw;
+    height: 88px;
     background-color: var(--primary-color);
     top: 0;
 }
+
+.navigation-bar .right {
+    display: flex;
+    margin-right: 15px;
+}
+
+.navigation-bar .right .hamburger-menu {
+    display: none;
+    position: relative;
+    top: -10px;
+}
+
+.hamburger-menu div {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hamburger-menu div:nth-child(1) {
+    top: 0;
+}
+
+.hamburger-menu div:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger-menu div:nth-child(3) {
+    top: 20px;
+}
+
+.hamburger-menu.active div:first-child {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.hamburger-menu.active div:last-child {
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+.hamburger-menu.active div:nth-child(2) {
+    transform: scaleX(0);
+}
+
 
 .navigation-bar ul {
     display: flex;
@@ -99,6 +144,18 @@
 .navigation-bar .right img {
     width: 20px;
     margin-right: 10px;
+}
+
+.navigation-bar .hamburger-menu {
+    cursor: pointer;
+}
+
+.navigation-bar .hamburger-menu div {
+    width: 30px;
+    height: 2px;
+    background-color: var(--yellow);
+    margin: 7px;
+    transition: all 0.3s ease-in-out;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -130,7 +187,6 @@ footer p {
     width: 100%;
     position: relative;
     overflow: hidden;
-    padding-top: 88px;
 }
 
 .welcome video {
@@ -176,7 +232,6 @@ footer p {
 /*-----------------------------------------------------------------------------------------*/
 
 .map {
-    padding-top: 88px; /* 88px = hauteur de la navbar */
     display: flex;
     height: 100vh;
     width: 100%;
@@ -260,6 +315,7 @@ footer p {
 .map_info {
     display: flex;
     height: 100vh;
+    overflow: hidden;
 }
 
 .map_info .map_info_image {
@@ -267,6 +323,7 @@ footer p {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    z-index: 1;
 }
 
 .map_info .map_info_text {
@@ -284,6 +341,7 @@ footer p {
     text-transform: uppercase;
     font-size: 48px;
     font-family: 'Krona One', sans-serif;
+    z-index: 1;
     margin-bottom: 50px;
 }
 
@@ -292,36 +350,70 @@ footer p {
     text-transform: uppercase;
     font-size: 32px;
     font-family: 'Krona One', sans-serif;
+    z-index: 1;
+
 }
 
 .map_info .map_info_text .map_name, .map_info .map_info_text .map_biographie {
     color: #fff;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
+    z-index: 1;
+
 }
 
 .map_info .map_info_text .map_biographie_title {
     margin-top: 50px;
+    z-index: 1;
+
 }
 
 .map_info .map_info_text .map_biographie {
     margin-bottom: 100px;
+    z-index: 1;
+
 }
 
 .map_info .map_info_text hr {
     width: 110%;
     margin-left: -5%;
     color: white;
+    z-index: 1;
+
 }
 
 .map_info .map_info_text .map_biographie_title {
     margin-top: 50px;
+    z-index: 1;
+
 }
 
 .map_info .map_button_go_back {
     position: absolute;
     top: 150px;
     left: 50px;
+    z-index: 1;
+    transition: transform 0.2s ease-in-out;
+}
+
+.map_info .map_button_go_back:hover {
+    transform: scale(1.1);
+}
+
+.map_info .map_info_anchor_right {
+    position: absolute;
+    top: 25px;
+    right: -25px;
+    width: 500px;
+    z-index: 0;
+}
+
+.map_info .map_info_anchor_left {
+    position: absolute;
+    bottom: 10px;
+    left: -75px;
+    width: 500px;
+    z-index: 0;
 }
 
 
@@ -330,6 +422,52 @@ footer p {
 /*-----------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 1250px) {
+    /* NAVBAR */
+    .navigation-bar {
+        position: relative;
+        padding: 0;
+    }
+
+    .navigation-bar .right .hamburger-menu {
+        display: block;
+    }
+
+    .navigation-bar ul {
+        top: 88px;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        display: block;
+        position: absolute;
+        background-color: var(--primary-color);
+        overflow: hidden;
+        height: 0;
+    }
+
+    .navigation-bar ul li {
+        margin: 0;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+
+    .navigation-bar .left {
+        margin: 15px;
+    }
+
+    .navigation-bar .left img {
+        width: 150px;
+    }
+
+    .navigation-bar .right a {
+        font-size: 10px;
+        margin-right: 50px;
+    }
+
+    .navigation-bar .right a img {
+        width: 15px;
+    }
+
+    /* WELCOME */
     .welcome .welcome_text {
         position: absolute;
         top: 50%;
@@ -354,6 +492,38 @@ footer p {
     .welcome .welcome_text h2 {
         font-size: 1.2rem;
     }
+
+    /* MAP */
+    .map_info .map_info_text {
+        padding: 20px 50px;
+    }
+
+    .map_info .map_info_text h2 {
+        font-size: 2rem;
+    }
+
+    .map_info .map_info_text .map_name_title, .map_info .map_info_text .map_biographie_title {
+        font-size: 1.5rem;
+    }
+
+    .map_info .map_info_text .map_name, .map_info .map_info_text .map_biographie {
+        font-size: 1rem;
+    }
+
+    .map_info .map_info_text .map_biographie_title {
+        margin-top: 20px;
+    }
+
+    .map_info .map_info_text .map_biographie {
+        margin-bottom: 50px;
+    }
+
+    .map_info .map_button_go_back {
+        width: 100px;
+        top: 125px;
+        left: 25px;
+
+    }
 }
 
 @media screen and (max-width: 1180px) {
@@ -368,5 +538,39 @@ footer p {
 
     .map .map_card {
         height: 100vh;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .map_info {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .map_info .map_info_image {
+        width: 100%;
+    }
+
+    .map_info .map_info_text {
+        width: 100%;
+        padding: 100px 15%;
+    }
+
+    .map_info .map_info_text .map_button_go_back {
+        top: 20px;
+    }
+
+    .map_info .map_info_text .map_button_go_back img {
+        width: 50px;
+    }
+
+    .map_info .map_info_anchor_right {
+        width: 300px;
+        top: -25px;
+    }
+
+    .map_info .map_info_anchor_left {
+        width: 300px;
+        bottom: -25px;
     }
 }

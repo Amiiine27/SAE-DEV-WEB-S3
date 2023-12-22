@@ -10,6 +10,7 @@
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
           rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/Red_Line_Defense_Icone.ico" type="image/x-icon">
     <title>Red Line Defense</title>
 </head>
 
@@ -41,6 +42,12 @@
         <!-- Balise "Se connecter" -->
         <div class="right">
             <a href="#" class="open-modal"><img src="../assets/connexion-logo.svg" alt="Connexion">Se connecter</a>
+
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
     </nav>
 </header>
@@ -83,7 +90,12 @@
     });
 
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+<script src="../js/animations.js"></script>
+<script src="../js/navbar.js"></script>
 </html>
