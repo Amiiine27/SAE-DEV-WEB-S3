@@ -31,26 +31,45 @@
             <li class="liste"><a href="#">Accueil</a></li>
         </ul>
         <!-- Modal -->
-        <div id="myModal" class="modal">
+        <div id="Modal_connexion" class="modal">
             <div id="modConnexion" class="modal-content">
                 <h1 class="titleMod">Connexion</h1>
                 <form action='index.php?module=connexion&action=connexion' method='post'>
                     <input  name='login' type='text' maxlength='20' placeholder='nom utilisateur' required/>
                     <input  name='password' type='password' placeholder='mot de passe'/></p>
-                    <a class="titleMod" href='#'>Mot de passe oublié ?</a>
+                    <a class="titleMod" id="link_mdp" href='#'>Mot de passe oublié ?</a>
                     <div class="connexion">
                         <button class ="buttonSubmit" type='submit' name='submit'>Se connecter</button>
-                        <a href='#'>S'inscrire</a>
-                    </div>
                 </form>
-                <span class="close" onclick="closeModal()">&times;</span>
+                        <div class="right">
+                        <a href='#' class ="open-modal" onclick="openModalInscription()">S'inscrire</a>
+                        </div>
+                    </div>
+                <span class="close" onclick="closeModalConnexion()">&times;</span>
                 <!-- Contenu du modal -->
             </div>
         </div>
 
+        <div id="Modal_inscription" class="modal">
+            <div id="modInscriptions"class="modal-content" style="display: flex; align-items: center; justify-content: center; background-color: #000; height: 50%; width: 40%;">
+                <h1 class="titleMod">S'inscrire</h1>
+                <form action='index.php?module=connexion&action=inscription' method='post'>
+                    <input  name='login' type='text' maxlength='20' placeholder='nom utilisateur' required/>
+                    <input  name='password' type='password' placeholder='mot de passe'/></p>
+                    <div class="connexion">
+                        <button class ="buttonSubmit" type='submit' name='submit'>S'inscrire</button>
+                </form>
+                    </div>
+                <span class="close" onclick="closeModalInscription()">&times;</span>
+                <!-- Contenu du modal -->
+            </div>
+        </div>
+
+
+
         <!-- Balise "Se connecter" -->
         <div class="right">
-            <a href="#" class="open-modal" onclick="openModal()">Se connecter</a>
+            <a href="#" class="open-modal" onclick="openModalConnexion()">Se connecter</a>
         </div>
     </nav>
 </header>
@@ -114,14 +133,27 @@
 //     }
 
     // Fonction pour afficher le modal
-    function openModal() {
-        var modal = document.getElementById("myModal");
+    function openModalConnexion() {
+        var modal = document.getElementById("Modal_connexion");
         modal.style.display = "block";
     }
 
+    function openModalInscription() {
+        var modalConnexion = document.getElementById("Modal_connexion");
+        var modal = document.getElementById("Modal_connexion");
+        modalConnexion.style.display = "none";
+        var modalInscription = document.getElementById("Modal_inscription");
+        modalInscription.style.display = "block";
+    }
+
     // Fonction pour fermer le modal
-    function closeModal() {
-        var modal = document.getElementById("myModal");
+    function closeModalConnexion() {
+        var modal = document.getElementById("Modal_connexion");
+        modal.style.display = "none";
+    }
+
+    function closeModalInscription() {
+        var modal = document.getElementById("Modal_inscription");
         modal.style.display = "none";
     }
 

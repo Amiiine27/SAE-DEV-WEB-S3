@@ -193,6 +193,18 @@ footer p {
     background-color: #000;
     height: 50%;
     width: 40%;
+}
+
+/*
+
+*/
+#modInscriptions{
+    display: flex;
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    justify-content: center; /* Centre le contenu horizontalement */
+    background-color: #000;
+    height: 50%;
+    width: 40%;
 
 }
 

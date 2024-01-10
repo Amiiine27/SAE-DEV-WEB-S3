@@ -9,6 +9,7 @@ class VueConnexion extends VueGenerique{
             parent::__construct();
         }
 
+        
         public function connexion(){
             ?>
             <div class="connexion">
