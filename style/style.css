@@ -27,6 +27,7 @@
     /* Couleur du texte blanc */
     padding: 20px;
     text-align: center;
+
 }
 
 .close {
@@ -418,6 +419,99 @@ footer p {
 
 
 /*-----------------------------------------------------------------------------------------*/
+/*------------------------------------------- Connexion -----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+#modConnexion{
+    display: flex;
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    justify-content: center; /* Centre le contenu horizontalement */
+    background-color: #000;
+    height: 50%;
+    width: 40%;
+}
+
+/*
+
+*/
+#modInscriptions{
+    display: flex;
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    justify-content: center; /* Centre le contenu horizontalement */
+    background-color: #000;
+    height: 50%;
+    width: 40%;
+
+}
+
+.titleMod{
+    color : var(--yellow);
+    margin-bottom: 10%;
+}
+
+.buttonSubmit{
+    background-color: var(--yellow);
+    color : var(primaryColor);
+    border-color: var(--yellow);
+    margin-left: 30%;
+}
+
+form {
+    max-width: 300px; /* Ajustez la largeur maximale selon vos besoins */
+    text-align: center; /* Centre le texte dans le formulaire */
+}
+
+form input,
+form button,
+form a {
+    margin-bottom: 25px;
+    display: inline-block;
+    vertical-align: top;
+   /* margin-right: 10px; /* Ajoute un espace entre chaque élément */
+}
+
+form input{
+    background-color : var(--primaryColor);
+    border: none;
+    outline: none;
+    color: #fff; 
+}
+
+
+
+.connexion button,
+.connexion a {
+    display: block;
+    margin-top: 10px; /* Ajoute un espace entre le bouton et la balise <a> */
+}
+
+::placeholder {
+    color: #fff; /* Couleur que vous souhaitez pour le placeholder */
+    opacity: 1;
+}
+::-ms-input-placeholder { /* Edge 12-18 */
+    color: #fff;
+  }
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------*/
 /*--------------------------------------- RESPONSIVE --------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
 
@@ -574,3 +668,4 @@ footer p {
         bottom: -25px;
     }
 }
+

@@ -18,5 +18,8 @@ class Connexion
             echo $Exception->getMessage();
         }
     }
-}
 
+    public static function getBdd(){
+        return Connexion::$bdd;
+    }
+}

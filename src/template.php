@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="../style/utilities.css">
     <link rel="stylesheet" href="../style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,13 +32,41 @@
             <li class="liste"><a href="#">Accueil</a></li>
         </ul>
         <!-- Modal -->
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
+        <div id="Modal_connexion" class="modal">
+            <div id="modConnexion" class="modal-content">
+                <h1 class="titleMod">Connexion</h1>
+                <form action='index.php?module=connexion&action=connexion' method='post'>
+                    <input  name='login' type='text' maxlength='20' placeholder='nom utilisateur' required/>
+                    <input  name='password' type='password' placeholder='mot de passe'/></p>
+                    <a class="titleMod" id="link_mdp" href='#'>Mot de passe oublié ?</a>
+                    <div class="connexion">
+                        <button class ="buttonSubmit" type='submit' name='submit'>Se connecter</button>
+                </form>
+                        <div class="right">
+                        <a href='#' class ="open-modal" onclick="openModalInscription()">S'inscrire</a>
+                        </div>
+                    </div>
+                <span class="close" onclick="closeModalConnexion()">&times;</span>
                 <!-- Contenu du modal -->
-                <h1>Connexion</h1>
             </div>
         </div>
+
+        <div id="Modal_inscription" class="modal">
+            <div id="modInscriptions"class="modal-content" style="display: flex; align-items: center; justify-content: center; background-color: #000; height: 50%; width: 40%;">
+                <h1 class="titleMod">S'inscrire</h1>
+                <form action='index.php?module=connexion&action=inscription' method='post'>
+                    <input  name='login' type='text' maxlength='20' placeholder='nom utilisateur' required/>
+                    <input  name='password' type='password' placeholder='mot de passe'/></p>
+                    <div class="connexion">
+                        <button class ="buttonSubmit" type='submit' name='submit'>S'inscrire</button>
+                </form>
+                    </div>
+                <span class="close" onclick="closeModalInscription()">&times;</span>
+                <!-- Contenu du modal -->
+            </div>
+        </div>
+
+
 
         <!-- Balise "Se connecter" -->
         <div class="right">
@@ -48,6 +77,7 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
+            <a href="#" class="open-modal" onclick="openModalConnexion()">Se connecter</a>
         </div>
     </nav>
 </header>
@@ -62,15 +92,76 @@
 </body>
 
 <script>
+
+//      // Fonction pour ouvrir la modal et charger le contenu
+//      function openModal(url) {
+//     console.log("ancienne url", url); 
+//     var modal = document.getElementById("myModal");
+//     var modalContent = modal.querySelector(".modal-content");
+
+//     // Extraire les paramètres module et action de l'URL
+//     var urlParts = url.split("?");
+//     if (urlParts.length === 2) {
+//         var params = urlParts[1].split("&");
+//         var module = null;
+//         var action = null;
+
+//         params.forEach(function(param) {
+//             var keyValue = param.split("=");
+//             if (keyValue.length === 2) {
+//                 if (keyValue[0] === "module") {
+//                     module = keyValue[1];
+//                 } else if (keyValue[0] === "action") {
+//                     action = keyValue[1];
+//                 }
+//             }
+//         });
+
+//         // Faire une requête AJAX pour récupérer le contenu de la page
+//         var xhr = new XMLHttpRequest();
+//         xhr.onreadystatechange = function() {
+//             if (xhr.readyState == 4 && xhr.status == 200) {
+//                 modalContent.innerHTML = xhr.responseText;
+//                 modal.style.display = "block";
+//             }
+//         };
+
+//         // Utiliser les paramètres module et action pour former la nouvelle URL
+//         var newUrl = 'index.php?module=' + module + '&action=' + action;
+//         console.log("new Url", newUrl);
+//         xhr.open("GET", newUrl, true);
+//         xhr.send();
+//     }
+// }
+
+
+//     function closeModal() {
+//         var modal = document.getElementById("myModal");
+//         modal.style.display = "none";
+//     }
+
     // Fonction pour afficher le modal
-    function openModal() {
-        var modal = document.getElementById("myModal");
+    function openModalConnexion() {
+        var modal = document.getElementById("Modal_connexion");
         modal.style.display = "block";
     }
 
+    function openModalInscription() {
+        var modalConnexion = document.getElementById("Modal_connexion");
+        var modal = document.getElementById("Modal_connexion");
+        modalConnexion.style.display = "none";
+        var modalInscription = document.getElementById("Modal_inscription");
+        modalInscription.style.display = "block";
+    }
+
     // Fonction pour fermer le modal
-    function closeModal() {
-        var modal = document.getElementById("myModal");
+    function closeModalConnexion() {
+        var modal = document.getElementById("Modal_connexion");
+        modal.style.display = "none";
+    }
+
+    function closeModalInscription() {
+        var modal = document.getElementById("Modal_inscription");
         modal.style.display = "none";
     }
 
@@ -93,6 +184,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
         integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
