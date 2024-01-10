@@ -12,7 +12,7 @@ class ModeleConnexion extends Connexion{
         // Vérifier si le formulaire est soumis 
         if (isset( $_POST['submit']) && isset($_POST['login']) && isset($_POST['password'])) {
             $login = $_POST['login'];
-            $sql = Connexion::getBdd()->prepare('SELECT * FROM utilisateur WHERE login = :login');
+            $sql = Connexion::getBdd()->prepare('SELECT * FROM joueur WHERE username = :login');
             $sql->bindParam(':login', $login, PDO::PARAM_STR); // Assurez-vous de lier le paramètre :login avec une valeur $login
             $sql->execute();
             if($sql->rowCount() >= 1) {
@@ -22,7 +22,7 @@ class ModeleConnexion extends Connexion{
             else{
                 $hashMotDePasse = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $password = $hashMotDePasse;
-                $sql =  Connexion::getBdd()->prepare('INSERT INTO utilisateur (login,password) VALUES (:login,:password)');
+                $sql =  Connexion::getBdd()->prepare('INSERT INTO joueur (username,password,money,img_profil,online) VALUES (:login,:password,0,null,true)');
                 $sql->bindParam(':login', $login);
                 $sql->bindParam(':password', $password);
                     // insert one row
@@ -43,7 +43,7 @@ public function connexionUtilisateur() {
       $login = $_POST['login'];
       $password = $_POST['password'];
       
-      $sql = Connexion::getBdd()->prepare('SELECT * FROM utilisateur WHERE login = :login');
+      $sql = Connexion::getBdd()->prepare('SELECT * FROM joueur WHERE username = :login');
       $sql->bindParam(':login', $login, PDO::PARAM_STR);
       $sql->execute();
 

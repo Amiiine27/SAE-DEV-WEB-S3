@@ -21,16 +21,6 @@ class ContConnexion{
         $this->modele->ajoutUtilisateur();
     }
     
-    public function connexion(){
-        $this->vue->connexion();
-    }
-
-
-    public function inscription()
-    {
-        $this->vue->inscriptions();
-    }
-
 
     public function VerifConnexion(){
         $this->modele->connexionUtilisateur();

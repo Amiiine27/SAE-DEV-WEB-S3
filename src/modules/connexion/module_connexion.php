@@ -9,12 +9,10 @@ class ModConnexion{
         $this->controleur = new ContConnexion();
         switch($this->controleur->getAction()){
             case 'inscription':
-                $this->controleur->inscription();
                 $this->controleur->ajoutUtilisateur();
                 break;
 
             case 'connexion': 
-                $this->controleur->connexion();
                 $this->controleur->VerifConnexion();
                 break;
             case 'deconnexion': 
