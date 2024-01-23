@@ -23,6 +23,10 @@ switch ($module) {
             $moduleFile = './modules/connexion/module_connexion.php';
             $moduleClass = 'ModConnexion';
             break;
+    case 'encyclopedia':
+        $moduleFile = './modules/encyclopedia/module_encyclopedia.php';
+        $moduleClass = 'ModuleEncyclopedia';
+        break;
 }
 
 if (file_exists($moduleFile)) {
