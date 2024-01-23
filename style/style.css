@@ -102,6 +102,19 @@
     margin-right: 10px;
 }
 
+#onglet_connexion{
+    display: none;
+}
+
+.button_déconnexion{
+    color: var(--primary-color);
+    background-color: var(--yellow);
+    border-radius: 3px;
+    border-color:  var(--yellow);
+
+}
+
+
 /*-----------------------------------------------------------------------------------------*/
 /*----------------------------------------- FOOTER ----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
@@ -218,6 +231,9 @@ footer p {
     color : var(primaryColor);
     border-color: var(--yellow);
     margin-left: 30%;
+    margin-bottom: 25px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 form {
@@ -226,7 +242,6 @@ form {
 }
 
 form input,
-form button,
 form a {
     margin-bottom: 25px;
     display: inline-block;
@@ -271,6 +286,52 @@ form input{
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    #fff;
 }
+
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    cursor: pointer;
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px; /* Ajustez la taille selon vos besoins */
+    border-radius: 50%;
+}
+
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Fond blanc */
+    color: #000; /* Texte noir */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tooltip li {
+    margin-bottom: 8px;
+}
+
+.tooltip a {
+    color: #000; /* Liens noirs */
+    text-decoration: none;
+}
+
+.tooltip a:hover {
+    text-decoration: underline;
+}
+
+
+
 
 
 

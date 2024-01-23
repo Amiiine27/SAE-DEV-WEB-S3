@@ -1,4 +1,6 @@
-<?php global $tampon ?>
+<?php
+global 
+$tampon ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +30,36 @@
             <li class="liste"><a href="#">Shop</a></li>
             <li class="liste"><a href="#">Equipage</a></li>
             <li class="liste"><a href="#">Encyclopédie</a></li>
-            <li class="liste"><a href="#">Accueil</a></li>
+            <?php
+                if(isset($_SESSION['identifiant_utilisateur'])){
+                    echo ' <li class="liste"><a href="#">Scores</a></li>';
+                    echo ' <li class="liste"><a href="#">Mes items</a></li>';
+                    echo ' <li class="liste"><a href="#">Amis</a></li>';
+                    echo ' <li class="liste"><a href="#">Mon profil</a></li>';
+                    echo '<div class="right">';
+                    echo '<form method="post">';
+                    echo '<div class="right"><button type="submit" name="logout" class="button_déconnexion">Déconnexion</button></div>';
+                    echo '</form>';
+                    echo '</div>';
+                    echo ' <div id="onglet_connexion" style ="display:none;">
+                        <a href="#" class="open-modal" onclick="openModalConnexion()">Se connecter</a>
+                    </div>';
+    }else{
+        echo ' <div id="onglet_connexion" class="right" style="display:block;">
+        <a href="#" class="open-modal" onclick="openModalConnexion()">Se connecter</a>
+    </div>';
+    }
+
+    if (isset($_POST['logout'])) {
+        // Détruire la session
+        session_destroy();
+        // Rediriger l'utilisateur vers la page de connexion ou une autre page appropriée
+        header('Location: index.php?');
+        exit();
+    }
+
+?>
+
         </ul>
         <!-- Modal -->
         <div id="Modal_connexion" class="modal">
@@ -65,13 +96,68 @@
             </div>
         </div>
 
+        <?php
 
+        /*
 
-        <!-- Balise "Se connecter" -->
-        <div class="right">
+        if (isset($_SESSION['identifiant_utilisateur'])) {
+          //  var_dump($_SESSION['identifiant_utilisateur']);
+            // L'utilisateur est connecté, donc cacher le lien de connexion
+          echo '<div id="info_profil" style="display: block;">' .
+          ' <div class="tooltip-container"  style="display: block;">
+          <img src="/home/etudiants/info/fbenyoussef/local_html/Sae_Dev_Web/SAE-DEV-WEB-S3/images/logo1.png" alt="Photo de profil" class="profile-image" onclick="toggleTooltip()">
+                  <div class="tooltip">
+                  <ul>
+                      <li><a href="#">Mon profil</a></li>
+                      <li><a href="#">Amis</a></li>
+                      <li><a href="#">Score</a></li>
+                      <li><a href="#">Mes Items</a></li>
+                  </ul>
+              </div>' .
+      '</div>';
+            echo '<div id="onglet_connexion" style="display: none;">' .
+            '<a href="#" class="open-modal" onclick="openModalConnexion()">Se connecter</a>' .
+            '</div>';
+
+            if (isset($_POST['logout'])) {
+                // Détruire la session
+                session_destroy();
+                header('Location: index.php');
+                // Rediriger l'utilisateur vers la page de connexion ou une autre page appropriée
+                exit();
+            }
+            else {
+                echo '<div id="onglet_connexion"> class ="right"' .
+                '<a href="#" class="open-modal" onclick="openModalConnexion()">Se connecter</a>' .
+               '</div>';
+            }
+        } else {
+           //var_dump($_SESSION['identifiant_utilisateur']);
+            // L'utilisateur n'est pas connecté, afficher le lien de connexion
+            echo '<div id="info_profil" style="display: none;">' .
+            ' <div class="tooltip-container">
+            <img src="/home/etudiants/info/fbenyoussef/local_html/Sae_Dev_Web/SAE-DEV-WEB-S3/images/logo1.png" alt="Photo de profil" class="profile-image" onclick="toggleTooltip()">
+                    <div class="tooltip">
+                    <ul>
+                        <li><a href="#">Mon profil</a></li>
+                        <li><a href="#">Amis</a></li>
+                        <li><a href="#">Score</a></li>
+                        <li><a href="#">Mes Items</a></li>
+                    </ul>
+                </div>' .
+        '</div>';
+    
+        }
+        */
+    
+        ?>
+    
+    <div id="onglet_connexion" class="right">
             <a href="#" class="open-modal" onclick="openModalConnexion()">Se connecter</a>
         </div>
+
     </nav>
+
 </header>
 
 <main>
@@ -81,56 +167,8 @@
 <footer>
     <p>© 2023 Red Line Defense, Inc. Tous droits réservés.</p>
 </footer>
-</body>
 
 <script>
-
-//      // Fonction pour ouvrir la modal et charger le contenu
-//      function openModal(url) {
-//     console.log("ancienne url", url); 
-//     var modal = document.getElementById("myModal");
-//     var modalContent = modal.querySelector(".modal-content");
-
-//     // Extraire les paramètres module et action de l'URL
-//     var urlParts = url.split("?");
-//     if (urlParts.length === 2) {
-//         var params = urlParts[1].split("&");
-//         var module = null;
-//         var action = null;
-
-//         params.forEach(function(param) {
-//             var keyValue = param.split("=");
-//             if (keyValue.length === 2) {
-//                 if (keyValue[0] === "module") {
-//                     module = keyValue[1];
-//                 } else if (keyValue[0] === "action") {
-//                     action = keyValue[1];
-//                 }
-//             }
-//         });
-
-//         // Faire une requête AJAX pour récupérer le contenu de la page
-//         var xhr = new XMLHttpRequest();
-//         xhr.onreadystatechange = function() {
-//             if (xhr.readyState == 4 && xhr.status == 200) {
-//                 modalContent.innerHTML = xhr.responseText;
-//                 modal.style.display = "block";
-//             }
-//         };
-
-//         // Utiliser les paramètres module et action pour former la nouvelle URL
-//         var newUrl = 'index.php?module=' + module + '&action=' + action;
-//         console.log("new Url", newUrl);
-//         xhr.open("GET", newUrl, true);
-//         xhr.send();
-//     }
-// }
-
-
-//     function closeModal() {
-//         var modal = document.getElementById("myModal");
-//         modal.style.display = "none";
-//     }
 
     // Fonction pour afficher le modal
     function openModalConnexion() {
@@ -145,6 +183,16 @@
         var modalInscription = document.getElementById("Modal_inscription");
         modalInscription.style.display = "block";
     }
+
+    function toggleTooltip() {
+        const tooltip = document.querySelector('.tooltip');
+        tooltip.style.display = (tooltip.style.display === 'block' ? 'none' : 'block');
+    }
+
+    document.addEventListener('click', function (event) {
+        const profileImage = document.querySelector('.profile-image');
+        const tooltip = document.querySelector('.tooltip');
+    });
 
     // Fonction pour fermer le modal
     function closeModalConnexion() {
@@ -173,6 +221,7 @@
     });
 
 </script>
+</body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
