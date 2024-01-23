@@ -32,34 +32,35 @@
                                  class="<?php echo isset($_GET['module']) && $_GET['module'] == 'encyclopedia' ? 'link_active' : '' ?>">Encyclopedie</a>
             </li>
             <?php
-                if(isset($_SESSION['identifiant_utilisateur'])){
-                    echo ' <li class="liste"><a href="#">Scores</a></li>';
-                    echo ' <li class="liste"><a href="#">Mes items</a></li>';
-                    echo ' <li class="liste"><a href="#">Amis</a></li>';
-                    echo ' <li class="liste"><a href="#">Mon profil</a></li>';
-                    echo '<div class="right">';
-                    echo '<form method="post">';
-                    echo '<div class="right"><button type="submit" name="logout" class="button_déconnexion">Déconnexion</button></div>';
-                    echo '</form>';
-                    echo '</div>';
-                    echo ' <div id="onglet_connexion" style ="display:none;">
+            if (isset($_SESSION['identifiant_utilisateur'])) {
+                echo ' <li class="liste"><a href="#">Scores</a></li>';
+                echo ' <li class="liste"><a href="#">Mes items</a></li>';
+                echo ' <li class="liste"><a href="#">Amis</a></li>';
+                echo ' <li class="liste"><a href="index.php?module=profile&action=main_profile">Mon profil</a></li>';
+                echo ' </ul> ';
+                echo '<div class="right">';
+                echo '<form method="post">';
+                echo '<div class="right"><button type="submit" name="logout" class="button_déconnexion">Déconnexion</button></div>';
+                echo '</form>';
+                echo '</div>';
+                echo ' <div id="onglet_connexion" style ="display:none;">
                         <a href="#" class="open-modal" onclick="openModalConnexion()">Se connecter</a>
                     </div>';
-    }else{
-        echo ' <div id="onglet_connexion" class="right" style="display:block;">
-        <a href="#" class="open-modal" onclick="openModalConnexion()"><img src="../assets/connexion-logo.svg" alt="Connexion">Se connecter</a>
-    </div>';
-    }
+            } else {
+                echo ' </ul> <div id="onglet_connexion" class="right" style="display:block;">
+                        <a href="#" class="open-modal" onclick="openModalConnexion()"><img src="../assets/connexion-logo.svg" alt="Connexion">Se connecter</a>
+                    </div>';
+            }
 
-    if (isset($_POST['logout'])) {
-        // Détruire la session
-        session_destroy();
-        // Rediriger l'utilisateur vers la page de connexion ou une autre page appropriée
-        header('Location: index.php?');
-        exit();
-    }
+            if (isset($_POST['logout'])) {
+                // Détruire la session
+                session_destroy();
+                // Rediriger l'utilisateur vers la page de connexion ou une autre page appropriée
+                header('Location: index.php?');
+                exit();
+            }
 
-?>
+            ?>
 
         </ul>
         <!-- Modal -->
@@ -67,38 +68,40 @@
             <div id="modConnexion" class="modal-content">
                 <h1 class="titleMod">Connexion</h1>
                 <form action='index.php?module=connexion&action=connexion' method='post'>
-                    <input  name='login' type='text' maxlength='20' placeholder='nom utilisateur' required/>
-                    <input  name='password' type='password' placeholder='mot de passe'/></p>
+                    <input name='login' type='text' maxlength='20' placeholder='nom utilisateur' required />
+                    <input name='password' type='password' placeholder='mot de passe' /></p>
                     <a class="titleMod" id="link_mdp" href='#'>Mot de passe oublié ?</a>
                     <div class="connexion">
-                        <button class ="buttonSubmit" type='submit' name='submit'>Se connecter</button>
+                        <button class="buttonSubmit" type='submit' name='submit'>Se connecter</button>
                 </form>
-                        <div class="right">
-                        <a href='#' class ="open-modal" onclick="openModalInscription()">S'inscrire</a>
-                        </div>
-                    </div>
-                <span class="close" onclick="closeModalConnexion()">&times;</span>
-                <!-- Contenu du modal -->
+                <div class="right">
+                    <a href='#' class="open-modal" onclick="openModalInscription()">S'inscrire</a>
+                </div>
             </div>
+            <span class="close" onclick="closeModalConnexion()">&times;</span>
+            <!-- Contenu du modal -->
+        </div>
         </div>
 
         <div id="Modal_inscription" class="modal">
-            <div id="modInscriptions"class="modal-content" style="display: flex; align-items: center; justify-content: center; background-color: #000; height: 50%; width: 40%;">
+            <div id="modInscriptions" class="modal-content"
+                 style="display: flex; align-items: center; justify-content: center; background-color: #000; height: 50%; width: 40%;">
                 <h1 class="titleMod">S'inscrire</h1>
                 <form action='index.php?module=connexion&action=inscription' method='post'>
-                    <input  name='login' type='text' maxlength='20' placeholder='nom utilisateur' required/>
-                    <input  name='password' type='password' placeholder='mot de passe'/></p>
+                    <input name='login' type='text' maxlength='20' placeholder='nom utilisateur' required />
+                    <input name='password' type='password' placeholder='mot de passe' /></p>
                     <div class="connexion">
-                        <button class ="buttonSubmit" type='submit' name='submit'>S'inscrire</button>
+                        <button class="buttonSubmit" type='submit' name='submit'>S'inscrire</button>
                 </form>
-                    </div>
-                <span class="close" onclick="closeModalInscription()">&times;</span>
-                <!-- Contenu du modal -->
             </div>
+            <span class="close" onclick="closeModalInscription()">&times;</span>
+            <!-- Contenu du modal -->
+        </div>
 
 
-    <div id="onglet_connexion" class="right">
-            <a href="#" class="open-modal" onclick="openModalConnexion()"><img src="../assets/connexion-logo.svg" alt="Connexion">Se connecter</a>
+        <div id="onglet_connexion" class="right">
+            <a href="#" class="open-modal" onclick="openModalConnexion()"><img src="../assets/connexion-logo.svg"
+                                                                               alt="Connexion">Se connecter</a>
         </div>
 
     </nav>
@@ -159,7 +162,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
         integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

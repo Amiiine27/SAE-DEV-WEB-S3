@@ -20,12 +20,16 @@ switch ($module) {
         $moduleClass = 'ModuleMap';
         break;
     case 'connexion':
-            $moduleFile = './modules/connexion/module_connexion.php';
-            $moduleClass = 'ModConnexion';
-            break;
+        $moduleFile = './modules/connexion/module_connexion.php';
+        $moduleClass = 'ModConnexion';
+        break;
     case 'encyclopedia':
         $moduleFile = './modules/encyclopedia/module_encyclopedia.php';
         $moduleClass = 'ModuleEncyclopedia';
+        break;
+    case 'profile':
+        $moduleFile = './modules/profile/module_profile.php';
+        $moduleClass = 'ModuleProfile';
         break;
 }
 
