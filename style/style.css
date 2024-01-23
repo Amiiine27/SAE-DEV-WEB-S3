@@ -719,6 +719,34 @@ form input {
         left: 25px;
 
     }
+
+    /* ENCYCLOPEDIA */
+    .encyclopedia_card {
+        flex-direction: column;
+        padding: 150px 0;
+    }
+
+    .encyclopedia_card .encyclopedia_images_main {
+        width: 100%;
+        height: 350px;
+    }
+
+    .encyclopedia_text {
+        width: 100%;
+        padding: 0 50px;
+    }
+
+    .encyclopedia_anchor {
+        display: none;
+    }
+
+    .encyclopedia_card .encyclopedia_images_main .encyclopedia_rectangle_dot {
+        left: 30%;
+    }
+
+    .encyclopedia_odd .encyclopedia_images_main .encyclopedia_rectangle_dot {
+        left: 50%;
+    }
 }
 
 @media screen and (max-width: 1180px) {
