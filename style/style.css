@@ -147,7 +147,6 @@
     margin-right: 10px;
 }
 
-<<<<<<< HEAD
 .navigation-bar .hamburger-menu {
     cursor: pointer;
 }
@@ -160,21 +159,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-=======
-#onglet_connexion{
-    display: none;
-}
-
-.button_déconnexion{
-    color: var(--primary-color);
-    background-color: var(--yellow);
-    border-radius: 3px;
-    border-color:  var(--yellow);
-
-}
-
-
->>>>>>> modCo
 /*-----------------------------------------------------------------------------------------*/
 /*----------------------------------------- FOOTER ----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
@@ -282,7 +266,6 @@ footer p {
     filter: opacity(1);
 }
 
-<<<<<<< HEAD
 .map .map_card .map_image_shadow {
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
@@ -434,15 +417,112 @@ footer p {
     z-index: 0;
 }
 
-=======
->>>>>>> modCo
+/*-----------------------------------------------------------------------------------------*/
+/*-------------------------------------- ENCYCLOPEDIA -------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.encyclopedia {
+    padding: 88px 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.encyclopedia_card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 125px 0;
+}
+
+.encyclopedia_anchor {
+    height: 400px;
+    position: relative;
+}
+
+.encyclopedia_anchor_left {
+    left: -50px;
+}
+
+.encyclopedia_images_main {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.encyclopedia_item_image {
+    height: 175px;
+    z-index: 10;
+}
+
+.encyclopedia_rectangle_dot {
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    height: 140px;
+}
+
+.encyclopedia_text {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.encyclopedia_text h2 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-family: 'Krona One', sans-serif;
+}
+
+.encyclopedia_text p {
+    color: #fff;
+    margin-bottom: 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.encyclopedia_line {
+    width: 75%;
+    border: 1px solid white;
+    position: absolute;
+    right: 75px;
+    opacity: 1;
+}
+
+/*--- ODD ---*/
+.encyclopedia_odd {
+    flex-direction: row-reverse;
+}
+
+.encyclopedia_odd .encyclopedia_anchor {
+    left: 0;
+    right: -50px;
+}
+
+.encyclopedia_odd .encyclopedia_rectangle_dot {
+    left: 300px;
+}
+
+.encyclopedia_odd .encyclopedia_text {
+    text-align: right;
+}
+
+.encyclopedia_line_odd {
+    width: 75%;
+    border: 1px solid white;
+    position: absolute;
+    left: 75px;
+    opacity: 1;
+}
 
 /*-----------------------------------------------------------------------------------------*/
 /*------------------------------------------- Connexion -----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
-
-
-#modConnexion{
+#modConnexion {
     display: flex;
     align-items: center; /* Aligne les éléments verticalement au centre */
     justify-content: center; /* Centre le contenu horizontalement */
@@ -454,7 +534,7 @@ footer p {
 /*
 
 */
-#modInscriptions{
+#modInscriptions {
     display: flex;
     align-items: center; /* Aligne les éléments verticalement au centre */
     justify-content: center; /* Centre le contenu horizontalement */
@@ -464,22 +544,19 @@ footer p {
 
 }
 
-.titleMod{
-    color : var(--yellow);
+.titleMod {
+    color: var(--yellow);
     margin-bottom: 10%;
 }
 
-.buttonSubmit{
+.buttonSubmit {
     background-color: var(--yellow);
-    color : var(primaryColor);
+    color: var(primaryColor);
     border-color: var(--yellow);
     margin-left: 30%;
-<<<<<<< HEAD
-=======
     margin-bottom: 25px;
     display: inline-block;
     vertical-align: top;
->>>>>>> modCo
 }
 
 form {
@@ -488,24 +565,20 @@ form {
 }
 
 form input,
-<<<<<<< HEAD
 form button,
-=======
->>>>>>> modCo
 form a {
     margin-bottom: 25px;
     display: inline-block;
     vertical-align: top;
-   /* margin-right: 10px; /* Ajoute un espace entre chaque élément */
+    /* margin-right: 10px; /* Ajoute un espace entre chaque élément */
 }
 
-form input{
-    background-color : var(--primaryColor);
+form input {
+    background-color: var(--primaryColor);
     border: none;
     outline: none;
-    color: #fff; 
+    color: #fff;
 }
-
 
 
 .connexion button,
@@ -518,28 +591,28 @@ form input{
     color: #fff; /* Couleur que vous souhaitez pour le placeholder */
     opacity: 1;
 }
+
 ::-ms-input-placeholder { /* Edge 12-18 */
     color: #fff;
-  }
-
-  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #fff;
 }
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #fff;
+}
+
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #fff;
-   opacity:  1;
+    color: #fff;
+    opacity: 1;
 }
+
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #fff;
-   opacity:  1;
+    color: #fff;
+    opacity: 1;
 }
+
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #fff;
+    color: #fff;
 }
-
-
-<<<<<<< HEAD
-=======
 .tooltip-container {
     position: relative;
     display: inline-block;
@@ -581,12 +654,6 @@ form input{
 .tooltip a:hover {
     text-decoration: underline;
 }
-
-
-
-
-
->>>>>>> modCo
 
 /*-----------------------------------------------------------------------------------------*/
 /*--------------------------------------- RESPONSIVE --------------------------------------*/
@@ -663,7 +730,6 @@ form input{
     .welcome .welcome_text h2 {
         font-size: 1.2rem;
     }
-<<<<<<< HEAD
 
     /* MAP */
     .map_info .map_info_text {
@@ -695,6 +761,34 @@ form input{
         top: 125px;
         left: 25px;
 
+    }
+
+    /* ENCYCLOPEDIA */
+    .encyclopedia_card {
+        flex-direction: column;
+        padding: 150px 0;
+    }
+
+    .encyclopedia_card .encyclopedia_images_main {
+        width: 100%;
+        height: 350px;
+    }
+
+    .encyclopedia_text {
+        width: 100%;
+        padding: 0 50px;
+    }
+
+    .encyclopedia_anchor {
+        display: none;
+    }
+
+    .encyclopedia_card .encyclopedia_images_main .encyclopedia_rectangle_dot {
+        left: 30%;
+    }
+
+    .encyclopedia_odd .encyclopedia_images_main .encyclopedia_rectangle_dot {
+        left: 50%;
     }
 }
 
@@ -747,6 +841,3 @@ form input{
     }
 }
 
-=======
-}
->>>>>>> modCo

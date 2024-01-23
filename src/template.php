@@ -1,6 +1,4 @@
-<?php
-global 
-$tampon ?>
+<?php global $tampon ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +28,9 @@ $tampon ?>
             </li>
             <li class="liste"><a href="#">Shop</a></li>
             <li class="liste"><a href="#">Equipage</a></li>
-            <li class="liste"><a href="#">Encyclopédie</a></li>
+            <li class="liste"><a href="index.php?module=encyclopedia&action=main_encyclopedia"
+                                 class="<?php echo isset($_GET['module']) && $_GET['module'] == 'encyclopedia' ? 'link_active' : '' ?>">Encyclopedie</a>
+            </li>
             <?php
                 if(isset($_SESSION['identifiant_utilisateur'])){
                     echo ' <li class="liste"><a href="#">Scores</a></li>';
@@ -95,8 +95,8 @@ $tampon ?>
                 <span class="close" onclick="closeModalInscription()">&times;</span>
                 <!-- Contenu du modal -->
             </div>
-            
-    
+
+
     <div id="onglet_connexion" class="right">
             <a href="#" class="open-modal" onclick="openModalConnexion()"><img src="../assets/connexion-logo.svg" alt="Connexion">Se connecter</a>
         </div>
