@@ -38,18 +38,35 @@
                 echo ' <li class="liste"><a href="#">Amis</a></li>';
                 echo ' <li class="liste"><a href="index.php?module=profile&action=main_profile">Mon profil</a></li>';
                 echo ' </ul> ';
-                echo '<div class="right">';
-                echo '<form method="post">';
-                echo '<div class="right"><button type="submit" name="logout" class="button_déconnexion">Déconnexion</button></div>';
+                echo '<form method="post" class="right">';
+                ?>
+                    <button type="submit" name="logout" class="button_déconnexion">Déconnexion</button>
+                    <div class="hamburger-menu">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                    </div>
+
+                <?php
                 echo '</form>';
-                echo '</div>';
                 echo ' <div id="onglet_connexion" style ="display:none;">
                         <a href="#" class="open-modal" onclick="openModalConnexion()">Se connecter</a>
                     </div>';
             } else {
-                echo ' </ul> <div id="onglet_connexion" class="right" style="display:block;">
+                ?>
+                    </ul> 
+                    <div class="right" id="onglet_connexion">
+                        <div class="hamburger-menu">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+
                         <a href="#" class="open-modal" onclick="openModalConnexion()"><img src="../assets/connexion-logo.svg" alt="Connexion">Se connecter</a>
-                    </div>';
+                    </div>
+                <?php
+
+                echo ' ';
             }
 
             if (isset($_POST['logout'])) {
@@ -96,12 +113,6 @@
             </div>
             <span class="close" onclick="closeModalInscription()">&times;</span>
             <!-- Contenu du modal -->
-        </div>
-
-
-        <div id="onglet_connexion" class="right">
-            <a href="#" class="open-modal" onclick="openModalConnexion()"><img src="../assets/connexion-logo.svg"
-                                                                               alt="Connexion">Se connecter</a>
         </div>
 
     </nav>

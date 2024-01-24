@@ -2,7 +2,7 @@
 
 class ModelMap extends Connexion
 {
-    public function getAllMaps(): array
+    public function getAllMaps()
     {
         $sqlQuery = Connexion::$bdd->prepare('SELECT * FROM map;');
         $sqlQuery->execute();
@@ -10,7 +10,7 @@ class ModelMap extends Connexion
         return $sqlQuery->fetchAll();
     }
 
-    public function getMap(): array
+    public function getMap()
     {
         $sqlQuery = Connexion::$bdd->prepare('SELECT * FROM map WHERE id = :id_map;');
         $sqlQuery->execute([

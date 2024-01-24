@@ -4,7 +4,7 @@ include_once 'controller_map.php';
 
 class ModuleMap
 {
-    private ControllerMap $controller;
+    private $controller;
 
     public function __construct()
     {
@@ -20,7 +20,7 @@ class ModuleMap
         }
     }
 
-    public function displayContent(): false|string
+    public function displayContent()
     {
         return $this->controller->displayContent();
     }

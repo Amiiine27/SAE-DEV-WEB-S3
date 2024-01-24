@@ -5,9 +5,9 @@ require_once 'model_encyclopedia.php';
 
 class ControllerEncyclopedia
 {
-    private string $action;
-    private VueEncyclopedia $vue;
-    private ModelEncyclopedia $model;
+    private $action;
+    private $vue;
+    private $model;
 
     public function __construct()
     {
@@ -16,23 +16,23 @@ class ControllerEncyclopedia
         $this->action = $_GET['action'] ?? 'main_encyclopedia';
     }
 
-    public function getAction(): string
+    public function getAction()
     {
         return $this->action;
     }
 
-    public function displayContent(): false|string
+    public function displayContent()
     {
         return $this->vue->getAffichage();
     }
 
-    public function mainEncyclopedia(): void
+    public function mainEncyclopedia()
     {
         $encyclopediaArray = $this->model->getEncyclopedia();
         $this->vue->mainEncyclopedia($encyclopediaArray);
     }
 
-    public function showMore(): void
+    public function showMore()
     {
         $this->vue->showMore($this->model->getEncyclopedia());
     }

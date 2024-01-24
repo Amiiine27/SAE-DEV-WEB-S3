@@ -4,7 +4,7 @@ require_once 'controller_encyclopedia.php';
 
 class ModuleEncyclopedia
 {
-    private ControllerEncyclopedia $controller;
+    private $controller;
 
     public function __construct()
     {
@@ -17,7 +17,7 @@ class ModuleEncyclopedia
         }
     }
 
-    public function displayContent(): false|string
+    public function displayContent()
     {
         return $this->controller->displayContent();
     }

@@ -12,17 +12,17 @@ class VueProfile extends VueGenerique
         if (isset($_SESSION['identifiant_utilisateur'])) {
             ?>
             <div class="profile">
-                <h1>Mon profile</h1>
+                <h1>Mon profil</h1>
 
                 <?php
                 $avatarPath = "../images/profile/avatar.png";
                 if ($userInfo[0]['img_profil'] != null) {
-                    $avatarPath = "../images/profile/" . $userInfo[0]['img_profile'];
+                    $avatarPath = "../images/profile/avatars/" . $userInfo[0]['img_profil'];
                 }
                 ?>
 
                 <div class="profile_form">
-                    <form action="">
+                    <form action="index.php?module=profile&action=change_profile" method="POST" enctype="multipart/form-data">
                         <label for="avatar">
                             <img src="<?php echo $avatarPath ?>" alt="">
                         </label>
@@ -44,24 +44,18 @@ class VueProfile extends VueGenerique
         }
     }
 
-    public function showMore($mapArray): void
-    {
+    public function changeProfile() {
         ?>
-        <div class="map_info">
-            <img class="map_info_image" src="../images/map/<?php echo $mapArray['image'] ?>" alt="Image of the map">
-            <div class="map_info_text">
-                <a class="map_button_go_back" href="index.php?module=map&action=main_map">
-                    <img src="../assets/left-arrow-in-circular-button-black-symbol.png" alt="">
-                </a>
-                <img class="map_info_anchor_right" src="../assets/anchor_right.png" alt="">
-                <img class="map_info_anchor_left" src="../assets/anchor_left.png" alt="">
-                <h2>Map <?php echo $mapArray['id'] ?></h2>
-                <p class="map_name_title">// Name</p>
-                <p class="map_name"><?php echo $mapArray['name'] ?></p>
-                <p class="map_biographie_title">// Biographie</p>
-                <p class="map_biographie"><?php echo $mapArray['description'] ?></p>
-                <hr>
-            </div>
+        <div class="profile_change_profile">
+            <h1 class="profile_change_profile_title">Les modifications ont bien été enregistrer !</h1>
+        </div>
+        <?php
+    }
+
+    public function changeProfileError() {
+        ?>
+        <div class="profile_change_profile">
+            <h1 class="profile_change_profile_title">Erreur, le nom d'utilisateur que vous aviez saisie existe déjà !</h1>
         </div>
         <?php
     }
