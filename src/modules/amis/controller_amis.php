@@ -30,13 +30,7 @@ class ContAmis{
         $idJoueur = $this->modele->getId($_SESSION['identifiant_utilisateur']);
         
         // Appelle la méthode supprimerAmis dans le modèle
-        $suppressionReussie = $this->modele->supprimerAmis($idJoueur, $idAmi);
-
-        if ($suppressionReussie) {
-            echo 'Suppression réussie </br>';
-        } else {
-            echo 'Suppression échouée </br>';
-        }
+        $this->modele->supprimerAmis($idJoueur, $idAmi);
     }
 }
 
