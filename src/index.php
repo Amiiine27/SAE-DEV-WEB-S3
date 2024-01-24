@@ -39,6 +39,10 @@ switch ($module) {
         $moduleFile = './modules/equipage/module_equipage.php';
         $moduleClass = 'ModuleEquipage';
         break;
+    case 'amis':
+                $moduleFile = './modules/amis/module_amis.php';
+                $moduleClass = 'ModAmis';
+                break;
 }
 
 if (file_exists($moduleFile)) {

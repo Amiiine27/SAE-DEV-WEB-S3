@@ -178,6 +178,10 @@
     padding-top: 10px;
 }
 
+#onglet_connexion{
+    display: none;
+}
+
 
 .propos  h2{
     font-size: 30px;
@@ -571,6 +575,7 @@ footer p {
     z-index: 0;
 }
 
+
 /*-----------------------------------------------------------------------------------------*/
 /*-------------------------------------- ENCYCLOPEDIA -------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
@@ -719,7 +724,6 @@ form {
 }
 
 form input,
-form button,
 form a {
     margin-bottom: 25px;
     display: inline-block;
@@ -773,6 +777,7 @@ form input {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #fff;
 }
+
 
 .tooltip-container {
     position: relative;
@@ -1077,3 +1082,114 @@ form input {
     }
 }
 
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------------------- Amis -----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+.amis{
+    background-color : var(--primary-color);
+    height: 50%;
+}
+
+
+.container_titre{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.title_page{
+    text-align: center;
+    color : var(--yellow);
+    font-family: 'Krona One', sans-serif;
+    font-size: 50px;
+    margin-bottom : 20px;
+    margin-top: 100px;
+}
+
+.demandes_amis{
+    margin-left: 20px;
+    margin-bottom : 30px;
+}
+
+
+.button_demandesAmis{
+    color: var(--primary-color);
+    background-color: var(--yellow);
+    border-radius: 3px;
+    border-color:  var(--yellow);
+}
+
+
+.container_subtitle_MesAmis{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 10px;
+}
+
+
+.subtitle_mesAmis{
+    color: #fff;
+    font-family: 'Krona One', sans-serif;
+    font-size: 20px;
+}
+
+.attr_amis{
+    color: #fff;
+    font-family: 'Krona One', sans-serif;
+    font-size: 10px;
+}
+.button_supprimerAmis{
+    color : var(--primary-color);
+    background-color: red;
+    border-radius: 3px;
+    border-color:  red;
+}
+
+
+.container_buttonSupp{
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+/*
+.fill{
+    color: #63C119;
+
+}
+*/
+
+.profil_amis{
+    width: 100px;
+    height: 100px;
+}
+
+.container_amis{
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+  }
+
+.attribut {
+    display: flex;
+    flex-direction: column; /* Les éléments à l'intérieur seront alignés verticalement */
+    /* Ajoutez des styles pour la div attribut si nécessaire */
+    margin-top: 50px;
+    margin-left: 19px;
+}
+
+.separate_amis{
+    border-color: #fff;
+    width: 35%;
+    border-width: 2px;
+    margin-left: 15px;  
+}
+
+.button_déconnexion{
+    background-color:var(--yellow);
+    color: var(--primary-color);
+    border-color: var(--yellow);
+    border-radius: 2px;
+}
