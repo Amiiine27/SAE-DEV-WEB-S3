@@ -147,7 +147,6 @@
     margin-right: 10px;
 }
 
-<<<<<<< HEAD
 .navigation-bar .hamburger-menu {
     cursor: pointer;
 }
@@ -160,7 +159,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-=======
 #onglet_connexion{
     display: none;
 }
@@ -174,7 +172,6 @@
 }
 
 
->>>>>>> modCo
 /*-----------------------------------------------------------------------------------------*/
 /*----------------------------------------- FOOTER ----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
@@ -282,7 +279,6 @@ footer p {
     filter: opacity(1);
 }
 
-<<<<<<< HEAD
 .map .map_card .map_image_shadow {
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
@@ -434,8 +430,6 @@ footer p {
     z-index: 0;
 }
 
-=======
->>>>>>> modCo
 
 /*-----------------------------------------------------------------------------------------*/
 /*------------------------------------------- Connexion -----------------------------------------*/
@@ -474,12 +468,9 @@ footer p {
     color : var(primaryColor);
     border-color: var(--yellow);
     margin-left: 30%;
-<<<<<<< HEAD
-=======
     margin-bottom: 25px;
     display: inline-block;
     vertical-align: top;
->>>>>>> modCo
 }
 
 form {
@@ -488,10 +479,6 @@ form {
 }
 
 form input,
-<<<<<<< HEAD
-form button,
-=======
->>>>>>> modCo
 form a {
     margin-bottom: 25px;
     display: inline-block;
@@ -537,56 +524,6 @@ form input{
    color:    #fff;
 }
 
-
-<<<<<<< HEAD
-=======
-.tooltip-container {
-    position: relative;
-    display: inline-block;
-}
-
-.profile-image {
-    cursor: pointer;
-    width: 40px; /* Ajustez la taille selon vos besoins */
-    height: 40px; /* Ajustez la taille selon vos besoins */
-    border-radius: 50%;
-}
-
-
-.tooltip {
-    display: none;
-    position: absolute;
-    background-color: #fff; /* Fond blanc */
-    color: #000; /* Texte noir */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.tooltip ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.tooltip li {
-    margin-bottom: 8px;
-}
-
-.tooltip a {
-    color: #000; /* Liens noirs */
-    text-decoration: none;
-}
-
-.tooltip a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
->>>>>>> modCo
 
 /*-----------------------------------------------------------------------------------------*/
 /*--------------------------------------- RESPONSIVE --------------------------------------*/
@@ -663,7 +600,6 @@ form input{
     .welcome .welcome_text h2 {
         font-size: 1.2rem;
     }
-<<<<<<< HEAD
 
     /* MAP */
     .map_info .map_info_text {
@@ -747,6 +683,107 @@ form input{
     }
 }
 
-=======
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------------------- Amis -----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+.amis{
+    background-color : var(--primary-color);
+    height: 50%;
 }
->>>>>>> modCo
+
+
+.container_titre{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.title_page{
+    text-align: center;
+    color : var(--yellow);
+    font-family: 'Krona One', sans-serif;
+    font-size: 50px;
+    margin-bottom : 20px;
+    margin-top: 100px;
+}
+
+.demandes_amis{
+    margin-left: 20px;
+    margin-bottom : 30px;
+}
+
+
+.button_demandesAmis{
+    color: var(--primary-color);
+    background-color: var(--yellow);
+    border-radius: 3px;
+    border-color:  var(--yellow);
+}
+
+
+.container_subtitle_MesAmis{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 10px;
+}
+
+
+.subtitle_mesAmis{
+    color: #fff;
+    font-family: 'Krona One', sans-serif;
+    font-size: 20px;
+}
+
+.attr_amis{
+    color: #fff;
+    font-family: 'Krona One', sans-serif;
+    font-size: 10px;
+}
+.button_supprimerAmis{
+    color : var(--primary-color);
+    background-color: red;
+    border-radius: 3px;
+    border-color:  red;
+}
+
+
+.container_buttonSupp{
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+/*
+.fill{
+    color: #63C119;
+
+}
+*/
+
+.profil_amis{
+    width: 100px;
+    height: 100px;
+}
+
+.container_amis{
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+  }
+
+.attribut {
+    display: flex;
+    flex-direction: column; /* Les éléments à l'intérieur seront alignés verticalement */
+    /* Ajoutez des styles pour la div attribut si nécessaire */
+    margin-top: 50px;
+    margin-left: 19px;
+}
+
+.separate_amis{
+    border-color: #fff;
+    width: 35%;
+    border-width: 2px;
+    margin-left: 15px;  
+}

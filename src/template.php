@@ -15,6 +15,7 @@ $tampon ?>
           rel="stylesheet">
     <link rel="shortcut icon" href="../assets/Red_Line_Defense_Icone.ico" type="image/x-icon">
     <title>Red Line Defense</title>
+    <script src="../js/suppression_amis.js"></script>
 </head>
 
 <body>
@@ -35,7 +36,7 @@ $tampon ?>
                 if(isset($_SESSION['identifiant_utilisateur'])){
                     echo ' <li class="liste"><a href="#">Scores</a></li>';
                     echo ' <li class="liste"><a href="#">Mes items</a></li>';
-                    echo ' <li class="liste"><a href="#">Amis</a></li>';
+                    echo '<li class="liste"><a href="index.php?module=amis&action=mes_amis" class="' . (!isset($_GET["module"]) || $_GET["module"] == "amis" ? "link_active" : "") . '">Amis</a></li>';
                     echo ' <li class="liste"><a href="#">Mon profil</a></li>';
                     echo '<div class="right">';
                     echo '<form method="post">';
@@ -95,7 +96,7 @@ $tampon ?>
                 <span class="close" onclick="closeModalInscription()">&times;</span>
                 <!-- Contenu du modal -->
             </div>
-            
+
     
     <div id="onglet_connexion" class="right">
             <a href="#" class="open-modal" onclick="openModalConnexion()"><img src="../assets/connexion-logo.svg" alt="Connexion">Se connecter</a>

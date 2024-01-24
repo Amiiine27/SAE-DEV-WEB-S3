@@ -23,6 +23,10 @@ switch ($module) {
             $moduleFile = './modules/connexion/module_connexion.php';
             $moduleClass = 'ModConnexion';
             break;
+    case 'amis':
+                $moduleFile = './modules/amis/module_amis.php';
+                $moduleClass = 'ModAmis';
+                break;
 }
 
 if (file_exists($moduleFile)) {
