@@ -4,7 +4,7 @@ include_once 'controller_profile.php';
 
 class ModuleProfile
 {
-    private ControllerProfile $controller;
+    private $controller;
 
     public function __construct()
     {
@@ -14,10 +14,13 @@ class ModuleProfile
             case 'main_profile':
                 $this->controller->mainProfile();
                 break;
+            case 'change_profile':
+                $this->controller->changeProfile();
+                break;
         }
     }
 
-    public function displayContent(): false|string
+    public function displayContent()
     {
         return $this->controller->displayContent();
     }

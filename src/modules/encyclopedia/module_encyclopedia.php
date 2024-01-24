@@ -4,7 +4,7 @@ require_once 'controller_encyclopedia.php';
 
 class ModuleEncyclopedia
 {
-    private  $controller;
+    private $controller;
 
     public function __construct()
     {
