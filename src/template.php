@@ -27,7 +27,13 @@
                                  class="<?php echo isset($_GET['module']) && $_GET['module'] == 'map' ? 'link_active' : '' ?>">Map</a>
             </li>
             <li class="liste"><a href="#">Shop</a></li>
-            <li class="liste"><a href="#">Equipage</a></li>
+            <li class="liste"><a href="index.php?module=equipage&action=equipage"
+                                class="<?php echo isset($_GET['module']) && $_GET['module'] == 'equipage' ? 'link_active' : '' ?>">Equipage</a>
+            
+        </li>
+            <li class="liste"><a href="index.php?module=apropos&action=apropos"
+                                 class="<?php echo isset($_GET['module']) && $_GET['module'] == 'apropos' ? 'link_active' : '' ?>">A Propos</a>
+            </li>
             <li class="liste"><a href="index.php?module=encyclopedia&action=main_encyclopedia"
                                  class="<?php echo isset($_GET['module']) && $_GET['module'] == 'encyclopedia' ? 'link_active' : '' ?>">Encyclopedie</a>
             </li>
@@ -68,8 +74,8 @@
             <div id="modConnexion" class="modal-content">
                 <h1 class="titleMod">Connexion</h1>
                 <form action='index.php?module=connexion&action=connexion' method='post'>
-                    <input name='login' type='text' maxlength='20' placeholder='nom utilisateur' required />
-                    <input name='password' type='password' placeholder='mot de passe' /></p>
+                    <input class="modal_form" name='login' type='text' maxlength='20' placeholder='nom utilisateur' required />
+                    <input class="modal_form" name='password' type='password' placeholder='mot de passe' /></p>
                     <a class="titleMod" id="link_mdp" href='#'>Mot de passe oublié ?</a>
                     <div class="connexion">
                         <button class="buttonSubmit" type='submit' name='submit'>Se connecter</button>

@@ -5,9 +5,9 @@ require_once 'model_encyclopedia.php';
 
 class ControllerEncyclopedia
 {
-    private string $action;
-    private VueEncyclopedia $vue;
-    private ModelEncyclopedia $model;
+    private  $action;
+    private  $vue;
+    private  $model;
 
     public function __construct()
     {
@@ -21,7 +21,7 @@ class ControllerEncyclopedia
         return $this->action;
     }
 
-    public function displayContent(): false|string
+    public function displayContent()
     {
         return $this->vue->getAffichage();
     }

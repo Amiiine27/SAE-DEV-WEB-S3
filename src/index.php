@@ -31,6 +31,14 @@ switch ($module) {
         $moduleFile = './modules/profile/module_profile.php';
         $moduleClass = 'ModuleProfile';
         break;
+    case 'apropos':
+        $moduleFile = './modules/aPropos/module_aPropos.php';
+        $moduleClass = 'ModuleApropos';
+        break;
+    case 'equipage':
+        $moduleFile = './modules/equipage/module_equipage.php';
+        $moduleClass = 'ModuleEquipage';
+        break;
 }
 
 if (file_exists($moduleFile)) {

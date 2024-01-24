@@ -5,9 +5,9 @@ require_once 'model_map.php';
 
 class ControllerMap
 {
-    private string $action;
-    private VueMap $vue;
-    private ModelMap $model;
+    private $action;
+    private $vue;
+    private $model;
 
     public function __construct()
     {
@@ -21,7 +21,7 @@ class ControllerMap
         return $this->action;
     }
 
-    public function displayContent(): false|string
+    public function displayContent()
     {
         return $this->vue->getAffichage();
     }

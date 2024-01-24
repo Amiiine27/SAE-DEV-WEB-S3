@@ -159,6 +159,160 @@
     transition: all 0.3s ease-in-out;
 }
 
+
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------------------ APROPOS -----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.propos{
+    padding-top: 120px;
+    height: 100vh;
+    text-align: center;
+    background-color:var(--primary-color);
+}
+.propos h1{
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 32px;
+    font-family: 'Krona One', sans-serif;
+    padding-top: 10px;
+}
+
+
+.propos  h2{
+    font-size: 30px;
+    font-family: 'Krona One', sans-serif;
+    color: var(--yellow);
+    padding-top: 40px;
+}
+
+.propos .propos_para p{
+    font-size: 20px;
+    color: var(--text-color);
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 25px;
+
+}
+
+.propos hr {
+    color:var(--yellow);
+    
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------------------- EQUIPAGE -----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.equipage {
+    padding-top: 95px;
+    height: 100vh;
+    text-align: center;
+    background-color:var(--primary-color);
+}
+
+.equipage h1{
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'Krona One', sans-serif;
+    padding-left: 450px;
+    padding-right: 450px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+.equipage h2{
+    font-size: 30px;
+    font-family: 'Krona One', sans-serif;
+    color: var(--yellow);
+    
+}
+
+.equipage .equipage_item{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 50px;
+    padding: 10px;
+}
+
+.equipage .equipage_item .itemRight{
+    flex-direction: column;
+}
+
+.equipage hr{
+    height:100vh;
+    width:.5vw;
+    border-width:0;
+    color:var(--yellow);
+    background-color:var(--yellow);
+   }
+   
+
+.equipage .buttonEquipage{
+    font-size: 20px;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-family: 'Krona One', sans-serif;
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+}
+
+.equipageCreation{
+    padding-top: 95px;
+    height: 100vh;
+    text-align: center;
+    background-color:var(--primary-color);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.equipageCreation h1{
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'Krona One', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.equipageCreation form{
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Krona One', sans-serif; 
+    flex-direction: column;
+    border-color: aliceblue; 
+}
+
+.equipageCreation .champs {
+  margin-bottom: 30px;
+  text-align:start;
+  
+}
+
+.equipage .affiche_clan  {
+    color: var(--text-color);
+    font-size: 15px;
+    font-family: 'Krona One', sans-serif; 
+    flex-direction: column;
+    text-align:start;
+    margin-left: 300px;
+}
+
+.equipage .affiche_clan .rejoindre {
+    font-size: 20px;
+    background-color: var(--primary-color);
+    font-family: 'Krona One', sans-serif;
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+}
 /*-----------------------------------------------------------------------------------------*/
 /*----------------------------------------- FOOTER ----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
@@ -571,6 +725,12 @@ form a {
     display: inline-block;
     vertical-align: top;
     /* margin-right: 10px; /* Ajoute un espace entre chaque élément */
+}
+
+.modal_form{
+    margin-bottom: 25px;
+    display: inline-block;
+    vertical-align: top; 
 }
 
 form input {
