@@ -16,7 +16,7 @@ class ControllerMap
         $this->action = $_GET['action'] ?? 'main-map';
     }
 
-    public function getAction(): string
+    public function getAction()
     {
         return $this->action;
     }
@@ -26,12 +26,12 @@ class ControllerMap
         return $this->vue->getAffichage();
     }
 
-    public function mainMap(): void
+    public function mainMap()
     {
         $this->vue->mainMap($this->model->getAllMaps());
     }
 
-    public function showMore(): void
+    public function showMore()
     {
         $this->vue->showMore($this->model->getMap());
     }

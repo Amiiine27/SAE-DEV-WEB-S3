@@ -30,7 +30,7 @@ class VueMap extends VueGenerique
         <?php
     }
 
-    public function showMore($mapArray): void
+    public function showMore($mapArray)
     {
         ?>
         <div class="map_info">
