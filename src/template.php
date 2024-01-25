@@ -48,7 +48,7 @@
                 </li>
                 <?php
                 echo ' <li class="liste"><a href="#">Mes items</a></li>';
-                echo ' <li class="liste"><a href="#">Amis</a></li>';
+                echo ' <li class="liste"><a href="index.php?module=amis&action=mes_amis">Amis</a></li>';
                 ?>
                 <li class="liste"><a href="index.php?module=profile&action=main_profile"
                                      class="<?php echo isset($_GET['module']) && $_GET['module'] == 'profile' ? 'link_active' : '' ?>">Mon
