@@ -182,7 +182,8 @@ form .hamburger-menu {
 
 .propos {
     padding-top: 120px;
-    height: 200vh;
+    min-height: 100vh;
+    height: 100%;
     text-align: center;
     background-color: var(--primary-color);
 }
