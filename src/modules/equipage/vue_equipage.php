@@ -192,7 +192,7 @@ class VueEquipage extends VueGenerique
         ?>
         <div class="equipage">
         <h1><?php echo $valeur['nom'] ?? '' ?></h1>
-        <h2 class="dev"><?php echo $valeur['devise'] ?? '' ?><h2>
+        <h2 class="deviseClan"><?php echo $valeur['devise'] ?? '' ?><h2>
             <div class="clan_infos">
                     <div class="equipage_item">
                         <h3>Membres</h3>
