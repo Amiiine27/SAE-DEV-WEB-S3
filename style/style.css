@@ -174,13 +174,14 @@ form .hamburger-menu {
 /*------------------------------------------ APROPOS -----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
 
-.propos{
+.propos {
     padding-top: 120px;
     height: 100vh;
     text-align: center;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
 }
-.propos h1{
+
+.propos h1 {
     color: var(--yellow);
     text-transform: uppercase;
     font-size: 32px;
@@ -188,19 +189,15 @@ form .hamburger-menu {
     padding-top: 10px;
 }
 
-#onglet_connexion{
-    display: none;
-}
 
-
-.propos  h2{
+.propos h2 {
     font-size: 30px;
     font-family: 'Krona One', sans-serif;
     color: var(--yellow);
     padding-top: 40px;
 }
 
-.propos .propos_para p{
+.propos .propos_para p {
     font-size: 20px;
     color: var(--text-color);
     padding-left: 250px;
@@ -210,8 +207,8 @@ form .hamburger-menu {
 }
 
 .propos hr {
-    color:var(--yellow);
-    
+    color: var(--yellow);
+
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -222,10 +219,10 @@ form .hamburger-menu {
     padding-top: 95px;
     height: 100vh;
     text-align: center;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
 }
 
-.equipage h1{
+.equipage h1 {
     color: var(--yellow);
     text-transform: uppercase;
     font-size: 50px;
@@ -236,34 +233,34 @@ form .hamburger-menu {
     padding-bottom: 50px;
 }
 
-.equipage h2{
+.equipage h2 {
     font-size: 30px;
     font-family: 'Krona One', sans-serif;
     color: var(--yellow);
-    
+
 }
 
-.equipage .equipage_item{
+.equipage .equipage_item {
     display: inline-block;
     vertical-align: middle;
     margin: 50px;
     padding: 10px;
 }
 
-.equipage .equipage_item .itemRight{
+.equipage .equipage_item .itemRight {
     flex-direction: column;
 }
 
-.equipage hr{
-    height:100vh;
-    width:.5vw;
-    border-width:0;
-    color:var(--yellow);
-    background-color:var(--yellow);
-   }
-   
+.equipage hr {
+    height: 100vh;
+    width: .5vw;
+    border-width: 0;
+    color: var(--yellow);
+    background-color: var(--yellow);
+}
 
-.equipage .buttonEquipage{
+
+.equipage .buttonEquipage {
     font-size: 20px;
     background-color: var(--primary-color);
     text-align: center;
@@ -274,18 +271,18 @@ form .hamburger-menu {
     margin: 15px;
 }
 
-.equipageCreation{
+.equipageCreation {
     padding-top: 95px;
     height: 100vh;
     text-align: center;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
 }
 
-.equipageCreation h1{
+.equipageCreation h1 {
     color: var(--yellow);
     text-transform: uppercase;
     font-size: 50px;
@@ -294,27 +291,27 @@ form .hamburger-menu {
     padding-bottom: 20px;
 }
 
-.equipageCreation form{
+.equipageCreation form {
     color: var(--yellow);
     text-transform: uppercase;
     font-size: 15px;
-    font-family: 'Krona One', sans-serif; 
+    font-family: 'Krona One', sans-serif;
     flex-direction: column;
-    border-color: aliceblue; 
+    border-color: aliceblue;
 }
 
 .equipageCreation .champs {
-  margin-bottom: 30px;
-  text-align:start;
-  
+    margin-bottom: 30px;
+    text-align: start;
+
 }
 
-.equipage .affiche_clan  {
+.equipage .affiche_clan {
     color: var(--text-color);
     font-size: 15px;
-    font-family: 'Krona One', sans-serif; 
+    font-family: 'Krona One', sans-serif;
     flex-direction: column;
-    text-align:start;
+    text-align: start;
     margin-left: 300px;
 }
 
@@ -327,6 +324,7 @@ form .hamburger-menu {
     padding: 15px;
     margin: 15px;
 }
+
 /*-----------------------------------------------------------------------------------------*/
 /*----------------------------------------- FOOTER ----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
@@ -742,10 +740,10 @@ form a {
     /* margin-right: 10px; /* Ajoute un espace entre chaque élément */
 }
 
-.modal_form{
+.modal_form {
     margin-bottom: 25px;
     display: inline-block;
-    vertical-align: top; 
+    vertical-align: top;
 }
 
 form input {
@@ -1147,69 +1145,70 @@ form input {
 /*-----------------------------------------------------------------------------------------*/
 
 
-.amis{
-    background-color : var(--primary-color);
+.amis {
+    background-color: var(--primary-color);
     height: 50%;
 }
 
 
-.container_titre{
+.container_titre {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.title_page{
+.title_page {
     text-align: center;
-    color : var(--yellow);
+    color: var(--yellow);
     font-family: 'Krona One', sans-serif;
     font-size: 50px;
-    margin-bottom : 20px;
+    margin-bottom: 20px;
     margin-top: 100px;
 }
 
-.demandes_amis{
+.demandes_amis {
     margin-left: 20px;
-    margin-bottom : 30px;
+    margin-bottom: 30px;
 }
 
 
-.button_demandesAmis{
+.button_demandesAmis {
     color: var(--primary-color);
     background-color: var(--yellow);
     border-radius: 3px;
-    border-color:  var(--yellow);
+    border-color: var(--yellow);
 }
 
 
-.container_subtitle_MesAmis{
+.container_subtitle_MesAmis {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
 
-.subtitle_mesAmis{
+.subtitle_mesAmis {
     color: #fff;
     font-family: 'Krona One', sans-serif;
     font-size: 20px;
 }
 
-.attr_amis{
+.attr_amis {
     color: #fff;
     font-family: 'Krona One', sans-serif;
     font-size: 10px;
 }
-.button_supprimerAmis{
-    color : var(--primary-color);
+
+.button_supprimerAmis {
+    color: var(--primary-color);
     background-color: red;
     border-radius: 3px;
-    border-color:  red;
+    border-color: red;
 }
 
 
-.container_buttonSupp{
+.container_buttonSupp {
     margin-left: 20%;
     margin-top: 2%;
 }
@@ -1221,16 +1220,16 @@ form input {
 }
 */
 
-.profil_amis{
+.profil_amis {
     width: 100px;
     height: 100px;
 }
 
-.container_amis{
+.container_amis {
     display: flex;
     align-items: center;
     margin-left: 1%;
-  }
+}
 
 .attribut {
     display: flex;
@@ -1240,15 +1239,15 @@ form input {
     margin-left: 19px;
 }
 
-.separate_amis{
+.separate_amis {
     border-color: #fff;
     width: 35%;
     border-width: 2px;
-    margin-left: 15px;  
+    margin-left: 15px;
 }
 
-.button_déconnexion{
-    background-color:var(--yellow);
+.button_déconnexion {
+    background-color: var(--yellow);
     color: var(--primary-color);
     border-color: var(--yellow);
     border-radius: 2px;
