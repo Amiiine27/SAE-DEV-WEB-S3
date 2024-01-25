@@ -24,7 +24,6 @@ class ContAmis{
     public function detailsAmis(){
             $idJoueur = $this->modele->getId($_SESSION['identifiant_utilisateur']);
             $idAmis = $this->modele->getIdAmis($idJoueur);
-            $joueur = $this->modele->getJoueur();
             $infosAmisArray = array();
             foreach ($idAmis as $ami) {
                 $idAmi = $ami["idAmi"];
@@ -33,7 +32,7 @@ class ContAmis{
                 // Ajouter les informations dans le tableau associatif
                 $infosAmisArray[$idAmi] = $infosAmi;
             }
-            $this->vue->detailsAmis($infosAmisArray, $joueur);
+            $this->vue->detailsAmis($infosAmisArray);
             
         }
     

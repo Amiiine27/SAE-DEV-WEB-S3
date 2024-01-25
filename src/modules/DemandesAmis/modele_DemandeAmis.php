@@ -35,18 +35,6 @@ class ModeleAmis extends Connexion{
     return $this->sql->fetchAll(PDO::FETCH_ASSOC);
 }
 
-public function getJoueur(){
-  // Préparez la requête SQL en utilisant un paramètre nommé :id
-  $this->sql = Connexion::getBdd()->prepare('SELECT idJoueur,username,money,img_profil FROM joueur LIMIT 2');
-
-  // Exécutez la requête
-  $this->sql->execute();
-
-  // Récupérez les résultats sous forme de tableau associatif
-  return $this->sql->fetchAll(PDO::FETCH_ASSOC);
-}
-
-
 
 
 public function getInfosAmis($idAmi){

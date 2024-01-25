@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="../assets/Red_Line_Defense_Icone.ico" type="image/x-icon">
     <title>Red Line Defense</title>
     <script src="../js/suppression_amis.js"></script>
+    <script src="../js/ajoutAmis.js"></script>
 </head>
 
 <body>

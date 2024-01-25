@@ -1193,3 +1193,95 @@ form input {
     border-color: var(--yellow);
     border-radius: 2px;
 }
+
+.Ajout_amis{
+    position: relative;
+    float: right;
+    margin-top: -331px;
+    margin-right: 175px;
+}
+
+.barre_recherche{
+    border-color: #fff;
+    width: 91%;
+    border-width: 1px;
+    margin-left: 5px;
+    margin-top: -23px;
+}
+.img_barre_recherche{
+    background: url('../images/Amis/loupe.png') no-repeat; /* Remplacez 'chemin/vers/votre/image.png' par le chemin réel de votre image */
+    width: 50px;
+    border: none; /* Supprime la bordure du bouton */
+    cursor: pointer;
+}
+
+.Ajouter_amis{
+    display: flex;
+    justify-content: flex-end; 
+}
+.amis_separe{
+    border-color: #fff;
+    width: 35%;
+    border-width: 2px;
+    border-left: 2px;
+    border: none;
+    height: 100px; 
+    
+}
+
+.container_ajoutAmis{
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+  }
+
+  .button_ajoutAmis{
+    color : var(--primary-color);
+    background-color: var(--yellow);
+    border-radius: 3px;
+    border-color:  var(--yellow);
+}
+
+.container_buttonAjout{
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+.separate_ajoutAmis{
+        border-color: #fff;
+        width: 35%;
+        border-width: 2px;
+        margin-left: 15px;  
+}
+
+/*
+<div class="Ajout_amis">
+    <div class="container_subtitle_MesAmis">
+        <h3 class="subtitle_mesAmis">Ajouter des amis</h3>
+    </div>
+    
+<?php
+
+foreach ($JoueurArray as $joueur) {
+?>
+<div class="container_Ajoutamis" id="ajout_</*?php echo $joueur['idJoueur'] ?? ''; ?>">
+    <div class="profil">
+        <img class="profil_amis" src="../assets/logo.png" alt="image joueur">
+    </div>
+    <div class="attribut">
+        <p class="attr_amis"></*?php echo $joueur['username'] ?? ''; ?></p>
+        <p class="attr_amis"></*?php echo $joueur['money'] ?? ''; ?></p>
+    </div>
+    <div class="container_buttonAjout">
+        <form action="index.php?module=amis&action=ajout_amis" method="post">
+            <input type="hidden" name="ajout_id" value="</*?php echo $joueur['idJoueur'] ?? ''; ?>">
+            <button class="button_ajoutAmis" type="submit" name="submit">Ajout</button>
+        </form>
+    </div>
+</div>
+<hr class="separate_ajoutAmis" id="</*?php echo $joueur['idJoueur'] ?? ''; ?>">
+-->
+<?php
+}
+
+*/

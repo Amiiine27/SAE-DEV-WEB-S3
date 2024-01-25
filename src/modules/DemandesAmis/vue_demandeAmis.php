@@ -23,31 +23,26 @@ class VueAmis extends VueGenerique
     }
     */
 
-    public function detailsAmis($amisArray,$JoueurArray): void
+    public function detailsAmis($amisArray): void
     {
         ?>
         <div class="amis">
             <div class="container_titre">
                 <p class="title_page">Amis</p>
             </div>
-            <!--
             <div class="demandes_amis">
                 <button class="button_demandesAmis">MES DEMANDES D'AMIS</button>
             </div>
-    -->
-
-                <div class="container_subtitle_MesAmis">
-                    <h3 class="subtitle_mesAmis">Mes amis</h3>
-                </div>
-
-                <div class="Amis">
+            <div class="container_subtitle_MesAmis">
+                <h3 class="subtitle_mesAmis">Mes amis</h3>
+            </div>
                 <?php
                 foreach ($amisArray as $ami) {
                     foreach ($ami as $id => $infosAmi) {
                         ?>
                         <div class="container_amis" id="ami_<?php echo $infosAmi['idJoueur'] ?? ''; ?>">
                             <div class="profil">
-                                <img class="profil_amis" src="../assets/logo.png"  alt="image joueur">
+                                <img class="profil_amis" src="../assets/logo.png" alt="Logo du site web">
                             </div>
                         <div class="attribut">
                             <p class="attr_amis"><?php echo $infosAmi['username'] ?? '' ?></p>
@@ -64,15 +59,11 @@ class VueAmis extends VueGenerique
                         <?php
                     }
                 }
-
                 ?>
-
-        
-            </div> 
+            </div>
         </div>
         <?php
     }
     
 }
 ?>
-
