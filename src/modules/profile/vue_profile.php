@@ -28,8 +28,9 @@ class VueProfile extends VueGenerique
                 <div class="profile_form">
                     <form action="index.php?module=profile&action=change_profile" method="POST"
                           enctype="multipart/form-data">
-                        <label for="avatar">
-                            <img src="<?php echo $avatarPath ?>" alt="">
+                        <label for="avatar" class="profile_label_image">
+                            <img src="<?php echo $avatarPath ?>" alt="Logo avatar" class="profile_image_avatar">
+                            <img src="../images/camera.png" alt="camera" class="profile_image_camera">
                         </label>
                         <input type="file" name="avatar" id="avatar" class="input_file">
                         <label for="username">Username</label>

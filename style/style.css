@@ -921,7 +921,7 @@ form input {
     color: #535353;
 }
 
-.profile_form form label img {
+.profile_form form .profile_label_image .profile_image_avatar {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -929,6 +929,18 @@ form input {
     box-shadow: 0 0 5px rgba(255, 222, 0, 0.3);
     margin: 0 auto 20px auto;
     display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.profile_form form label .profile_image_camera {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 34%;
+    left: 56%;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -1261,6 +1273,10 @@ form input {
     .profile_form form label img {
         width: 150px;
         height: 150px;
+    }
+
+    .profile_form form .profile_label_image .profile_image_camera {
+        left: 63%;
     }
 }
 
