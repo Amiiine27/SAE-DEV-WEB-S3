@@ -28,6 +28,6 @@ class ControllerScores
 
     public function mainScores()
     {
-        $this->vue->mainScores();
+        $this->vue->mainScores($this->model->getScores(), $this->model->getMaps());
     }
 }
