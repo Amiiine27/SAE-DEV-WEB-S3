@@ -182,7 +182,7 @@ form .hamburger-menu {
 
 .propos {
     padding-top: 120px;
-    height: 100vh;
+    height: 200vh;
     text-align: center;
     background-color: var(--primary-color);
 }
@@ -194,6 +194,22 @@ form .hamburger-menu {
     font-family: 'Krona One', sans-serif;
     padding-top: 10px;
 }
+
+
+#onglet_connexion{
+    display: none;
+}
+
+.propos hr{
+    
+    width: 110%;
+    margin-left: -5%;
+    color: white;
+    z-index: 1;
+
+
+}
+
 
 
 .propos h2 {
@@ -215,6 +231,23 @@ form .hamburger-menu {
 .propos hr {
     color: var(--yellow);
 
+}
+
+.propos .propos_para .image_team .pics{
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+    margin: 15px;
+    border: solid var(--yellow) 5px;
+}
+
+.propos .propos_para .image_team .coll{
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    text-align: center;
+    align-content: center;    
 }
 
 /*-----------------------------------------------------------------------------------------*/
