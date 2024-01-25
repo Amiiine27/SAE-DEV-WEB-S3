@@ -71,7 +71,7 @@
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.55);
     position: fixed;
     z-index: 999;
-    width: 100vw;
+    width: 100%;
     height: 88px;
     background-color: var(--primary-color);
     top: 0;
@@ -85,6 +85,22 @@
     display: none;
     position: relative;
     top: -10px;
+}
+
+form .button_déconnexion {
+    position: relative;
+    right: 71px;
+    padding: 5px;
+    border: none;
+    transition: background-color 0.2s ease-in;
+}
+
+form .button_déconnexion:hover {
+    background-color: #b1a500;
+}
+
+form .hamburger-menu {
+    top: -30px !important;
 }
 
 .hamburger-menu div {
@@ -164,13 +180,15 @@
 /*------------------------------------------ APROPOS -----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
 
-.propos{
+.propos {
     padding-top: 120px;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     text-align: center;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
 }
-.propos h1{
+
+.propos h1 {
     color: var(--yellow);
     text-transform: uppercase;
     font-size: 32px;
@@ -178,19 +196,25 @@
     padding-top: 10px;
 }
 
-#onglet_connexion{
-    display: none;
+.propos hr {
+
+    width: 110%;
+    margin-left: -5%;
+    color: white;
+    z-index: 1;
+
+
 }
 
 
-.propos  h2{
+.propos h2 {
     font-size: 30px;
     font-family: 'Krona One', sans-serif;
     color: var(--yellow);
     padding-top: 40px;
 }
 
-.propos .propos_para p{
+.propos .propos_para p {
     font-size: 20px;
     color: var(--text-color);
     padding-left: 250px;
@@ -200,8 +224,25 @@
 }
 
 .propos hr {
-    color:var(--yellow);
-    
+    color: var(--yellow);
+
+}
+
+.propos .propos_para .image_team .pics {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+    margin: 15px;
+    border: solid var(--yellow) 5px;
+}
+
+.propos .propos_para .image_team .coll {
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    text-align: center;
+    align-content: center;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -210,50 +251,52 @@
 
 .equipage {
     padding-top: 95px;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     text-align: center;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
 }
 
-.equipage h1{
+.equipage h1 {
     color: var(--yellow);
     text-transform: uppercase;
     font-size: 50px;
     font-family: 'Krona One', sans-serif;
-    padding-left: 450px;
-    padding-right: 450px;
-    padding-top: 120px;
-    padding-bottom: 50px;
+    padding: 120px 450px 50px;
 }
 
-.equipage h2{
+.equipage h2 {
     font-size: 30px;
     font-family: 'Krona One', sans-serif;
     color: var(--yellow);
-    
+    margin-bottom: 0;
+
 }
 
-.equipage .equipage_item{
+.equipage .equipage_item {
     display: inline-block;
     vertical-align: middle;
     margin: 50px;
     padding: 10px;
 }
 
-.equipage .equipage_item .itemRight{
+.equipage .equipage_item .equipage_logo {
+    width: 300px;
+}
+
+.equipage .equipage_item .itemRight {
     flex-direction: column;
 }
 
-.equipage hr{
-    height:100vh;
-    width:.5vw;
-    border-width:0;
-    color:var(--yellow);
-    background-color:var(--yellow);
-   }
-   
+.equipage hr {
+    width: 110%;
+    margin-left: -5%;
+    color: white;
+    z-index: 1;
+}
 
-.equipage .buttonEquipage{
+
+.equipage .buttonEquipage {
     font-size: 20px;
     background-color: var(--primary-color);
     text-align: center;
@@ -264,18 +307,17 @@
     margin: 15px;
 }
 
-.equipageCreation{
+.equipageCreation {
     padding-top: 95px;
     height: 100vh;
-    text-align: center;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
 }
 
-.equipageCreation h1{
+.equipageCreation h1 {
     color: var(--yellow);
     text-transform: uppercase;
     font-size: 50px;
@@ -284,39 +326,61 @@
     padding-bottom: 20px;
 }
 
-.equipageCreation form{
+.equipageCreation form {
     color: var(--yellow);
     text-transform: uppercase;
     font-size: 15px;
-    font-family: 'Krona One', sans-serif; 
+    font-family: 'Krona One', sans-serif;
     flex-direction: column;
-    border-color: aliceblue; 
+    border-color: aliceblue;
+    width: 800px;
+    max-width: none;
 }
 
-.equipageCreation .champs {
-  margin-bottom: 30px;
-  text-align:start;
-  
+.equipageCreation form input:not([type='file']) {
+    margin-bottom: 30px;
+    padding: 5px;
+    background-color: var(--dark-black);
+    width: 100%;
 }
 
-.equipage .affiche_clan  {
+.equipage .affiche_clan {
     color: var(--text-color);
     font-size: 15px;
-    font-family: 'Krona One', sans-serif; 
+    font-family: 'Krona One', sans-serif;
     flex-direction: column;
-    text-align:start;
+    text-align: start;
     margin-left: 300px;
+    margin-top: 50px;
 }
 
-.equipage .affiche_clan .rejoindre {
-    font-size: 20px;
-    background-color: var(--primary-color);
+.equipage .affiche_clan .rejoindre button {
+    font-size: 17px;
+    background-color: var(--yellow);
+    border: none;
     font-family: 'Krona One', sans-serif;
-    color: var(--text-color);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px;
+    padding: 8px;
+    margin-top: 15px;
+    transition: background-color 0.2s ease-in;
 }
+
+.equipage .affiche_clan .rejoindre button:hover {
+    background-color: #b1a500;
+}
+
+.equipage .clan_infos p {
+    color: #fff;
+}
+
+.equipage .deviseClan {
+    color: #fff;
+}
+
+.equipage .affiche_clan div img {
+    width: 200px;
+    height: 200px;
+}
+
 /*-----------------------------------------------------------------------------------------*/
 /*----------------------------------------- FOOTER ----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
@@ -334,6 +398,7 @@ footer p {
     font-size: 11px;
     line-height: 50px;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
 }
 
 
@@ -731,10 +796,10 @@ form a {
     /* margin-right: 10px; /* Ajoute un espace entre chaque élément */
 }
 
-.modal_form{
+.modal_form {
     margin-bottom: 25px;
     display: inline-block;
-    vertical-align: top; 
+    vertical-align: top;
 }
 
 form input {
@@ -826,7 +891,6 @@ form input {
 /*-----------------------------------------------------------------------------------------*/
 
 .profile_not_connected {
-    padding-top: 88px;
     height: 100vh;
     width: 100%;
     background-color: var(--primary-color);
@@ -848,6 +912,17 @@ form input {
     height: 100vh;
     width: 100%;
     background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile h1 {
+    padding-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--yellow);
+    font-weight: 800;
+    font-family: 'Krona One', sans-serif;
 }
 
 .profile_form {
@@ -868,10 +943,14 @@ form input {
     height: 100%;
     justify-content: center;
     align-items: center;
+    padding: 50px;
 }
 
 .profile_form form label {
     width: 100%;
+    text-align: left;
+    font-size: 15px;
+    color: #c7c7c7;
 }
 
 .profile_form form input[type='text'] {
@@ -881,14 +960,30 @@ form input {
     padding: 15px 0;
 }
 
-.profile_form form label img {
-    width: 300px;
-    height: 300px;
+.profile_form form input[type='text']::placeholder {
+    color: #535353;
+}
+
+.profile_form form .profile_label_image .profile_image_avatar {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 2px solid var(--yellow);
     box-shadow: 0 0 5px rgba(255, 222, 0, 0.3);
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.profile_form form label .profile_image_camera {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 34%;
+    left: 56%;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -896,11 +991,187 @@ form input {
     display: none;
 }
 
+.profile_form form button {
+    padding: 15px;
+    background-color: var(--yellow);
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in;
+}
+
+.profile_form form button:hover {
+    background-color: #b1a500;
+}
+
+.profile_change_profile {
+    background-color: var(--primary-color);
+    height: 100vh;
+    position: relative;
+}
+
+.profile_change_profile_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: 'Krona One', sans-serif;
+    color: var(--yellow);
+    font-weight: 800;
+    text-align: center;
+}
+
+.profile_form .profile_change_password {
+    color: var(--yellow);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+.profile_change_password_section {
+    height: 100vh;
+    padding-top: 88px;
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.profile_change_password_section form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 80%;
+    height: 600px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--dark-black);
+}
+
+.profile_change_password_section form h1 {
+    color: var(--yellow);
+    font-family: 'Krona One', sans-serif;
+}
+
+.profile_change_password_section form label, .profile_change_password_section form input {
+    width: 100%;
+    text-align: left;
+}
+
+.profile_change_password_section form label {
+    font-size: 15px;
+    color: #c7c7c7;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+.profile_change_password_section form input {
+    padding: 15px 0;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+
+.profile_change_password_section form input::placeholder {
+    color: #535353;
+}
+
+.profile_change_password_section form button {
+    padding: 15px;
+    background-color: var(--yellow);
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in;
+}
+
+.profile_change_password_section form button:hover {
+    background-color: #b1a500;
+}
+
+.profile_anchor_left {
+    position: absolute;
+    top: 10%;
+    left: -75px;
+}
+
+.profile_anchor_right {
+    position: absolute;
+    bottom: 5%;
+    right: -75px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*----------------------------------------- SCORES ----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.scores {
+    min-height: 100vh;
+    height: 100%;
+    background-color: var(--primary-color);
+    padding: 88px 0;
+}
+
+.scores h1 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'Krona One', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.scores .score_none_games {
+    text-align: center;
+    font-weight: 500;
+    color: var(--yellow);
+    margin-top: 200px;
+}
+
+.scores .score_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+    padding: 60px;
+    position: relative;
+    background: linear-gradient(to bottom, rgb(10, 10, 10), rgb(0, 0, 0));
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    margin: 125px 150px 15px 250px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.scores .score_item .score_id {
+    font-family: 'Krona One', sans-serif;
+    font-size: 2rem;
+}
+
+.scores .score_item img {
+    position: absolute;
+    left: -550px;
+    width: 500px;
+}
+
 /*-----------------------------------------------------------------------------------------*/
 /*--------------------------------------- RESPONSIVE --------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1730px) {
     /* NAVBAR */
     .navigation-bar {
         position: relative;
@@ -945,7 +1216,9 @@ form input {
     .navigation-bar .right a img {
         width: 15px;
     }
+}
 
+@media screen and (max-width: 1250px) {
     /* WELCOME */
     .welcome .welcome_text {
         position: absolute;
@@ -1031,6 +1304,15 @@ form input {
     .encyclopedia_odd .encyclopedia_images_main .encyclopedia_rectangle_dot {
         left: 50%;
     }
+
+    /* PROFILE */
+    .profile_anchor_left {
+        display: none;
+    }
+
+    .profile_anchor_right {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1180px) {
@@ -1080,6 +1362,44 @@ form input {
         width: 300px;
         bottom: -25px;
     }
+
+    /* PROFILE */
+    .profile_form {
+        width: 400px;
+        padding: 10px;
+    }
+
+    .profile_form form label img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile_form form .profile_label_image .profile_image_camera {
+        left: 63%;
+    }
+
+    /* SCORES */
+    .scores .score_item img {
+        display: none;
+    }
+
+    .scores .score_item {
+        gap: 30px;
+        padding: 30px;
+        width: 90%;
+        margin: 25px auto;
+        font-size: 12px;
+    }
+
+    /* EQUIPAGE */
+    .equipageCreation h1 {
+        font-size: 26px;
+        padding: 50px 0;
+    }
+
+    .equipageCreation form {
+        width: 400px;
+    }
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -1087,69 +1407,70 @@ form input {
 /*-----------------------------------------------------------------------------------------*/
 
 
-.amis{
-    background-color : var(--primary-color);
+.amis {
+    background-color: var(--primary-color);
     height: 50%;
 }
 
 
-.container_titre{
+.container_titre {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.title_page{
+.title_page {
     text-align: center;
-    color : var(--yellow);
+    color: var(--yellow);
     font-family: 'Krona One', sans-serif;
     font-size: 50px;
-    margin-bottom : 20px;
+    margin-bottom: 20px;
     margin-top: 100px;
 }
 
-.demandes_amis{
+.demandes_amis {
     margin-left: 20px;
-    margin-bottom : 30px;
+    margin-bottom: 30px;
 }
 
 
-.button_demandesAmis{
+.button_demandesAmis {
     color: var(--primary-color);
     background-color: var(--yellow);
     border-radius: 3px;
-    border-color:  var(--yellow);
+    border-color: var(--yellow);
 }
 
 
-.container_subtitle_MesAmis{
+.container_subtitle_MesAmis {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
 
-.subtitle_mesAmis{
+.subtitle_mesAmis {
     color: #fff;
     font-family: 'Krona One', sans-serif;
     font-size: 20px;
 }
 
-.attr_amis{
+.attr_amis {
     color: #fff;
     font-family: 'Krona One', sans-serif;
     font-size: 10px;
 }
-.button_supprimerAmis{
-    color : var(--primary-color);
+
+.button_supprimerAmis {
+    color: var(--primary-color);
     background-color: red;
     border-radius: 3px;
-    border-color:  red;
+    border-color: red;
 }
 
 
-.container_buttonSupp{
+.container_buttonSupp {
     margin-left: 20%;
     margin-top: 2%;
 }
@@ -1161,16 +1482,16 @@ form input {
 }
 */
 
-.profil_amis{
+.profil_amis {
     width: 100px;
     height: 100px;
 }
 
-.container_amis{
+.container_amis {
     display: flex;
     align-items: center;
     margin-left: 1%;
-  }
+}
 
 .attribut {
     display: flex;
@@ -1180,15 +1501,15 @@ form input {
     margin-left: 19px;
 }
 
-.separate_amis{
+.separate_amis {
     border-color: #fff;
     width: 35%;
     border-width: 2px;
-    margin-left: 15px;  
+    margin-left: 15px;
 }
 
-.button_déconnexion{
-    background-color:var(--yellow);
+.button_déconnexion {
+    background-color: var(--yellow);
     color: var(--primary-color);
     border-color: var(--yellow);
     border-radius: 2px;

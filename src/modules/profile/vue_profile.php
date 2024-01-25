@@ -12,24 +12,32 @@ class VueProfile extends VueGenerique
         if (isset($_SESSION['identifiant_utilisateur'])) {
             ?>
             <div class="profile">
-                <h1>Mon profile</h1>
+                <img class="profile_anchor_left" src="../assets/anchor_left.png"
+                     alt="Anchor">
+                <img class="profile_anchor_right" src="../assets/anchor_right.png"
+                     alt="Anchor">
+                <h1>Mon profil</h1>
 
                 <?php
                 $avatarPath = "../images/profile/avatar.png";
                 if ($userInfo[0]['img_profil'] != null) {
-                    $avatarPath = "../images/profile/" . $userInfo[0]['img_profile'];
+                    $avatarPath = "../images/profile/avatars/" . $userInfo[0]['img_profil'];
                 }
                 ?>
 
                 <div class="profile_form">
-                    <form action="">
-                        <label for="avatar">
-                            <img src="<?php echo $avatarPath ?>" alt="">
+                    <form action="index.php?module=profile&action=change_profile" method="POST"
+                          enctype="multipart/form-data">
+                        <label for="avatar" class="profile_label_image">
+                            <img src="<?php echo $avatarPath ?>" alt="Logo avatar" class="profile_image_avatar">
+                            <img src="../images/camera.png" alt="camera" class="profile_image_camera">
                         </label>
                         <input type="file" name="avatar" id="avatar" class="input_file">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" value="<?php echo $userInfo[0]['username'] ?>"
-                               placeholder="username">
+                               placeholder="username" required>
+                        <a href="index.php?module=profile&action=change_password" class="profile_change_password">Changer
+                            le mot de passe</a>
                         <button type="submit">Enregistrer</button>
                     </form>
                 </div>
@@ -44,24 +52,72 @@ class VueProfile extends VueGenerique
         }
     }
 
-    public function showMore($mapArray): void
+    public function changeProfile()
     {
         ?>
-        <div class="map_info">
-            <img class="map_info_image" src="../images/map/<?php echo $mapArray['image'] ?>" alt="Image of the map">
-            <div class="map_info_text">
-                <a class="map_button_go_back" href="index.php?module=map&action=main_map">
-                    <img src="../assets/left-arrow-in-circular-button-black-symbol.png" alt="">
-                </a>
-                <img class="map_info_anchor_right" src="../assets/anchor_right.png" alt="">
-                <img class="map_info_anchor_left" src="../assets/anchor_left.png" alt="">
-                <h2>Map <?php echo $mapArray['id'] ?></h2>
-                <p class="map_name_title">// Name</p>
-                <p class="map_name"><?php echo $mapArray['name'] ?></p>
-                <p class="map_biographie_title">// Biographie</p>
-                <p class="map_biographie"><?php echo $mapArray['description'] ?></p>
-                <hr>
-            </div>
+        <div class="profile_change_profile">
+            <h1 class="profile_change_profile_title">Les modifications ont bien été enregistrer !</h1>
+        </div>
+        <?php
+    }
+
+    public function changeProfileError()
+    {
+        ?>
+        <div class="profile_change_profile">
+            <h1 class="profile_change_profile_title">Erreur, le nom d'utilisateur que vous aviez saisie existe déjà
+                !</h1>
+        </div>
+        <?php
+    }
+
+    public function changePassword()
+    {
+        ?>
+        <div class="profile_change_password_section">
+            <img class="profile_anchor_left" src="../assets/anchor_left.png"
+                 alt="Anchor">
+            <img class="profile_anchor_right" src="../assets/anchor_right.png"
+                 alt="Anchor">
+            <form action="index.php?module=profile&action=submit_password" method="POST">
+                <h1>Modifier mot passe</h1>
+                <label for="actual_password">Mot de passe actuel</label>
+                <input type="password" placeholder="Mot de passe" id="actual_password" name="actual_password" required>
+                <label for="new_password">Nouveau mot de passe</label>
+                <input type="password" placeholder="Nouveau mot de passe" id="new_password" name="new_password"
+                       required>
+                <label for="confirm_new_password">Confirmer votre mot de passe</label>
+                <input type="password" placeholder="Confirmer votre mot de passe" id="confirm_new_password"
+                       name="confirm_new_password" required>
+                <button type="submit">Valider</button>
+            </form>
+        </div>
+        <?php
+    }
+
+    public function actualPasswordError()
+    {
+        ?>
+        <div class="profile_change_profile">
+            <h1 class="profile_change_profile_title">Erreur, le mot de passe actuel est incorrect !</h1>
+        </div>
+        <?php
+    }
+
+    public function passwordConfirmError()
+    {
+        ?>
+        <div class="profile_change_profile">
+            <h1 class="profile_change_profile_title">Erreur, les mots de passe ne correspondent pas !</h1>
+        </div>
+        <?php
+    }
+
+    public function passwordChangeSuccess()
+    {
+        ?>
+        <div class="profile_change_profile">
+            <h1 class="profile_change_profile_title">Le mot de passe a bien été modifié !</h1>
         </div>
         <?php
     }

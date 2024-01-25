@@ -2,7 +2,7 @@
 
 class ModelEncyclopedia extends Connexion
 {
-    public function getEncyclopedia(): array
+    public function getEncyclopedia()
     {
         $sqlQuery = Connexion::$bdd->prepare('SELECT * FROM encyclopedie;');
         $sqlQuery->execute();
@@ -10,7 +10,7 @@ class ModelEncyclopedia extends Connexion
         return $sqlQuery->fetchAll();
     }
 
-    public function getItem(): array
+    public function getItem()
     {
         $sqlQuery = Connexion::$bdd->prepare('SELECT * FROM encyclopedie WHERE id = :id_item;');
         $sqlQuery->execute([

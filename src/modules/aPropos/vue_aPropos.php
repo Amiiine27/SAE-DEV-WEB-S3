@@ -42,6 +42,27 @@ class VueApropos extends VueGenerique
                     Ces jeunes développeurs sont en apprentissage et ont réalisé ce projet à l'issue d'une Sae.
 
                 </p>
+
+                <div class="image_team">
+                    <div class="coll">
+                        <img class="pics" src="../images/photo_profil/team1.jpeg" alt="Image Team1">
+                        
+                        
+                        
+                    </div>
+                    <div class="coll">
+                        <img class="pics" src="../images/photo_profil/team2.jpeg" alt="Image Team2">
+                       
+                    </div>
+                    <div class="coll">
+                        <img class="pics" src="../images/photo_profil/team3.jpeg" alt="Image Team3">
+                        
+                    </div>
+                    <div class="coll">
+                        <img class="pics" src="../images/photo_profil/team4.png" alt="Image Team4">
+                      
+                    </div>
+                </div>
             </div>
         </div>
         <?php

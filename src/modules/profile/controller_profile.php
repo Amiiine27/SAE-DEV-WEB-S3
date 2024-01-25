@@ -5,9 +5,9 @@ require_once 'model_profile.php';
 
 class ControllerProfile
 {
-    private string $action;
-    private VueProfile $vue;
-    private ModelProfile $model;
+    private $action;
+    private $vue;
+    private $model;
 
     public function __construct()
     {
@@ -16,12 +16,12 @@ class ControllerProfile
         $this->action = $_GET['action'] ?? 'main_profile';
     }
 
-    public function getAction(): string
+    public function getAction()
     {
         return $this->action;
     }
 
-    public function displayContent(): false|string
+    public function displayContent()
     {
         return $this->vue->getAffichage();
     }
@@ -29,5 +29,40 @@ class ControllerProfile
     public function mainProfile(): void
     {
         $this->vue->mainProfile($this->model->getUser($_SESSION['identifiant_utilisateur']));
+    }
+
+    public function changeProfile()
+    {
+        $error = $this->model->changeProfile();
+        if ($error) {
+            $this->vue->changeProfileError();
+        } else {
+            $this->vue->changeProfile();
+        }
+    }
+
+    public function changePassword()
+    {
+        $this->vue->changePassword();
+    }
+
+    public function submitPassword()
+    {
+        $this->model->submitPassword();
+    }
+
+    public function actualPasswordError()
+    {
+        $this->vue->actualPasswordError();
+    }
+
+    public function passwordConfirmError()
+    {
+        $this->vue->passwordConfirmError();
+    }
+
+    public function passwordChangeSuccess()
+    {
+        $this->vue->passwordChangeSuccess();
     }
 }
