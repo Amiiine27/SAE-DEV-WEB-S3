@@ -41,7 +41,11 @@
             </li>
             <?php
             if (isset($_SESSION['identifiant_utilisateur'])) {
-                echo ' <li class="liste"><a href="#">Scores</a></li>';
+                ?>
+                <li class="liste"><a href="index.php?module=scores&action=main_scores"
+                                     class="<?php echo isset($_GET['module']) && $_GET['module'] == 'scores' ? 'link_active' : '' ?>">Scores</a>
+                </li>
+                <?php
                 echo ' <li class="liste"><a href="#">Mes items</a></li>';
                 echo ' <li class="liste"><a href="#">Amis</a></li>';
                 ?>
