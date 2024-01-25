@@ -71,7 +71,7 @@
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.55);
     position: fixed;
     z-index: 999;
-    width: 100vw;
+    width: 100%;
     height: 88px;
     background-color: var(--primary-color);
     top: 0;
@@ -89,12 +89,18 @@
 
 form .button_déconnexion {
     position: relative;
-    top: 18px;
     right: 71px;
+    padding: 5px;
+    border: none;
+    transition: background-color 0.2s ease-in;
+}
+
+form .button_déconnexion:hover {
+    background-color: #b1a500;
 }
 
 form .hamburger-menu {
-    top: -37px !important;
+    top: -30px !important;
 }
 
 .hamburger-menu div {
@@ -856,6 +862,8 @@ form input {
     height: 100vh;
     width: 100%;
     background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
 }
 
 .profile h1 {
@@ -954,11 +962,98 @@ form input {
     text-align: center;
 }
 
+.profile_form .profile_change_password {
+    color: var(--yellow);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+.profile_change_password_section {
+    height: 100vh;
+    padding-top: 88px;
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.profile_change_password_section form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 80%;
+    height: 600px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--dark-black);
+}
+
+.profile_change_password_section form h1 {
+    color: var(--yellow);
+    font-family: 'Krona One', sans-serif;
+}
+
+.profile_change_password_section form label, .profile_change_password_section form input {
+    width: 100%;
+    text-align: left;
+}
+
+.profile_change_password_section form label {
+    font-size: 15px;
+    color: #c7c7c7;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+.profile_change_password_section form input {
+    padding: 15px 0;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+
+.profile_change_password_section form input::placeholder {
+    color: #535353;
+}
+
+.profile_change_password_section form button {
+    padding: 15px;
+    background-color: var(--yellow);
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in;
+}
+
+.profile_change_password_section form button:hover {
+    background-color: #b1a500;
+}
+
+.profile_anchor_left {
+    position: absolute;
+    top: 10%;
+    left: -75px;
+}
+
+.profile_anchor_right {
+    position: absolute;
+    bottom: 5%;
+    right: -75px;
+}
+
 /*-----------------------------------------------------------------------------------------*/
 /*--------------------------------------- RESPONSIVE --------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1730px) {
     /* NAVBAR */
     .navigation-bar {
         position: relative;
@@ -1003,7 +1098,9 @@ form input {
     .navigation-bar .right a img {
         width: 15px;
     }
+}
 
+@media screen and (max-width: 1250px) {
     /* WELCOME */
     .welcome .welcome_text {
         position: absolute;
@@ -1089,6 +1186,15 @@ form input {
     .encyclopedia_odd .encyclopedia_images_main .encyclopedia_rectangle_dot {
         left: 50%;
     }
+
+    /* PROFILE */
+    .profile_anchor_left {
+        display: none;
+    }
+
+    .profile_anchor_right {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1180px) {
@@ -1137,6 +1243,17 @@ form input {
     .map_info .map_info_anchor_left {
         width: 300px;
         bottom: -25px;
+    }
+
+    /* PROFILE */
+    .profile_form {
+        width: 400px;
+        padding: 10px;
+    }
+
+    .profile_form form label img {
+        width: 150px;
+        height: 150px;
     }
 }
 
