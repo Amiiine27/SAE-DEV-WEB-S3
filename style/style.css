@@ -1108,6 +1108,62 @@ form input {
 }
 
 /*-----------------------------------------------------------------------------------------*/
+/*----------------------------------------- SCORES ----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.scores {
+    min-height: 100vh;
+    height: 100%;
+    background-color: var(--primary-color);
+    padding: 88px 0;
+}
+
+.scores h1 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'Krona One', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.scores .score_none_games {
+    text-align: center;
+    font-weight: 500;
+    color: var(--yellow);
+    margin-top: 200px;
+}
+
+.scores .score_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+    padding: 60px;
+    position: relative;
+    background: linear-gradient(to bottom, rgb(10, 10, 10), rgb(0, 0, 0));
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    margin: 125px 150px 15px 250px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.scores .score_item .score_id {
+    font-family: 'Krona One', sans-serif;
+    font-size: 2rem;
+}
+
+.scores .score_item img {
+    position: absolute;
+    left: -550px;
+    width: 500px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
 /*--------------------------------------- RESPONSIVE --------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
 
@@ -1316,6 +1372,19 @@ form input {
 
     .profile_form form .profile_label_image .profile_image_camera {
         left: 63%;
+    }
+
+    /* SCORES */
+    .scores .score_item img {
+        display: none;
+    }
+
+    .scores .score_item {
+        gap: 30px;
+        padding: 30px;
+        width: 90%;
+        margin: 25px auto;
+        font-size: 12px;
     }
 }
 
