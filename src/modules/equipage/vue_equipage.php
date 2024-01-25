@@ -15,24 +15,24 @@ class VueEquipage extends VueGenerique
             <div class="equipage_item">
                 <h2> ROI DES PIRATES</h2>
                 <img src="../images/drapeauOp-removebg-preview-1.png" alt="Image Drapeau Equipage">
-                
+
             </div>
-            
+
             <div class="equipage_item">
                 <div class="itemRight">
                     <div class="button">
                         <a href="index.php?module=equipage&action=creer">
-                            <input class="buttonEquipage" type="button"  value="Créer Equipage" />
-                        </a> 
+                            <input class="buttonEquipage" type="button" value="Créer Equipage" />
+                        </a>
                         <a href="index.php?module=equipage&action=liste">
-                        <input class="buttonEquipage" type="button" value="Rejoindre Equipage" />
-                        </a> 
+                            <input class="buttonEquipage" type="button" value="Rejoindre Equipage" />
+                        </a>
                     </div>
                     <div class="img">
-                        <img src="../images/equipage-removebg-preview" alt="Image Equipage">
+                        <img src="../images/equipage-removebg-preview.png" alt="Image Equipage">
                     </div>
-                </div> 
-            </div> 
+                </div>
+            </div>
         </div>
         <?php
     }
@@ -43,18 +43,19 @@ class VueEquipage extends VueGenerique
 
         <div class="equipageCreation">
             <div>
-            <h1> CRÉEZ VOTRE ÉQUIPAGE !</h1>
+                <h1> CRÉEZ VOTRE ÉQUIPAGE !</h1>
             </div>
-            
-            <form action="index.php?module=equipage&action=ajoutBD" method="post" class="form-equipage" enctype="multipart/form-data">
+
+            <form action="index.php?module=equipage&action=ajoutBD" method="post" class="form-equipage"
+                  enctype="multipart/form-data">
 
                 <div class="champs">
                     <div>
-                    <label for="name">Nom </label>
+                        <label for="name">Nom </label>
                     </div>
 
                     <div>
-                    <input type="text" name="nom"  id="nom" size="60" style= 'height:45px' required />
+                        <input type="text" name="nom" id="nom" size="60" style='height:45px' required />
                     </div>
                 </div>
 
@@ -63,7 +64,7 @@ class VueEquipage extends VueGenerique
                         <label for="name">Devise </label>
                     </div>
                     <div>
-                        <input type="text" name="devise"  id="devise"  size="60" style= 'height:45px' required />
+                        <input type="text" name="devise" id="devise" size="60" style='height:45px' required />
                     </div>
                 </div>
 
@@ -72,7 +73,8 @@ class VueEquipage extends VueGenerique
                         <label for="description">Description </label>
                     </div>
                     <div>
-                        <input type="text" name="description" id="description" size="60" style= 'height:270px'required />
+                        <input type="text" name="description" id="description" size="60" style='height:270px'
+                               required />
                     </div>
                 </div>
 
@@ -82,19 +84,17 @@ class VueEquipage extends VueGenerique
                 </div>
 
 
-
                 <div>
-                <input type="submit" name="submit" value="Création" style="font-size: 20px;
+                    <input type="submit" name="submit" value="Création" style="font-size: 20px;
                     background-color: var(--yellow);
                     text-align: center;
                     font-family: 'Krona One', sans-serif;
                     color: var(--primary-color);
                     
-                    padding: 10px;"/>
-            
+                    padding: 10px;" />
+
             </form>
         </div>
-         
 
 
         <?php
@@ -111,14 +111,15 @@ class VueEquipage extends VueGenerique
     }
 
 
-    public function equipage_rejoindre($array){
+    public function equipage_rejoindre($array)
+    {
         ?>
         <div class="equipage">
             <h1> REJOINGEZ UN ÉQUIPAGE !</h1>
-            
+
             <?php
-            
-            foreach($array as $cle => $valeur) {
+
+            foreach ($array as $cle => $valeur) {
                 ?>
                 <div class="affiche_clan">
 
@@ -126,18 +127,18 @@ class VueEquipage extends VueGenerique
                     <p><?php echo $valeur['devise'] ?? '' ?><p>
 
                     <div>
-                        <img src="./<?echo $valeur['embleme_clan'] ?>" alt="logo" />                   
+                        <img src="../images/clan/<?php echo $valeur['embleme_clan'] ?>" alt="logo" />
                     </div>
 
-        
+
                     <div class="rejoindre">
-                            <button class="btn_rejoindre">REJOINDRE</button>
+                        <button class="btn_rejoindre">REJOINDRE</button>
                     </div>
                 </div>
                 <?php
             }
             ?>
-            
+
         </div>
         <?php
     }

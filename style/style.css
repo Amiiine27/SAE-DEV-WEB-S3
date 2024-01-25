@@ -223,7 +223,7 @@ form .hamburger-menu {
 
 .equipage {
     padding-top: 95px;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     background-color: var(--primary-color);
 }
@@ -233,10 +233,7 @@ form .hamburger-menu {
     text-transform: uppercase;
     font-size: 50px;
     font-family: 'Krona One', sans-serif;
-    padding-left: 450px;
-    padding-right: 450px;
-    padding-top: 120px;
-    padding-bottom: 50px;
+    padding: 120px 450px 50px;
 }
 
 .equipage h2 {
@@ -319,16 +316,26 @@ form .hamburger-menu {
     flex-direction: column;
     text-align: start;
     margin-left: 300px;
+    margin-top: 50px;
 }
 
-.equipage .affiche_clan .rejoindre {
-    font-size: 20px;
-    background-color: var(--primary-color);
+.equipage .affiche_clan .rejoindre button {
+    font-size: 17px;
+    background-color: var(--yellow);
+    border: none;
     font-family: 'Krona One', sans-serif;
-    color: var(--text-color);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px;
+    padding: 8px;
+    margin-top: 15px;
+    transition: background-color 0.2s ease-in;
+}
+
+.equipage .affiche_clan .rejoindre button:hover {
+    background-color: #b1a500;
+}
+
+.equipage .affiche_clan div img {
+    width: 200px;
+    height: 200px;
 }
 
 /*-----------------------------------------------------------------------------------------*/
