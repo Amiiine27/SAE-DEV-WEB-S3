@@ -195,13 +195,8 @@ form .hamburger-menu {
     padding-top: 10px;
 }
 
+.propos hr {
 
-#onglet_connexion{
-    display: none;
-}
-
-.propos hr{
-    
     width: 110%;
     margin-left: -5%;
     color: white;
@@ -209,7 +204,6 @@ form .hamburger-menu {
 
 
 }
-
 
 
 .propos h2 {
@@ -233,7 +227,7 @@ form .hamburger-menu {
 
 }
 
-.propos .propos_para .image_team .pics{
+.propos .propos_para .image_team .pics {
     border-radius: 100%;
     width: 200px;
     height: 200px;
@@ -242,12 +236,12 @@ form .hamburger-menu {
     border: solid var(--yellow) 5px;
 }
 
-.propos .propos_para .image_team .coll{
+.propos .propos_para .image_team .coll {
     display: inline-block;
     vertical-align: top;
     width: 250px;
     text-align: center;
-    align-content: center;    
+    align-content: center;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -364,11 +358,12 @@ form .hamburger-menu {
 .equipage .affiche_clan .rejoindre button:hover {
     background-color: #b1a500;
 }
-.equipage .clan_infos p{
+
+.equipage .clan_infos p {
     color: #fff;
 }
 
-.equipage .deviseClan{
+.equipage .deviseClan {
     color: #fff;
 }
 
