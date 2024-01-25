@@ -23,6 +23,12 @@ class ModuleEquipage
             case "liste":
                 $this->controller->list();
                 break;
+            case "joinclan":
+                $this->controller->joinclan();
+                break;
+            case "quit":
+                $this->controller->quit();
+                break;
         }
     }
 
