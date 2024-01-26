@@ -27,11 +27,11 @@
             <li class="liste"><a href="index.php?module=map&action=main_map"
                                  class="<?php echo isset($_GET['module']) && $_GET['module'] == 'map' ? 'link_active' : '' ?>">Map</a>
             </li>
-            <li class="liste"><a href="#">Shop</a></li>
+            <li class="liste"><a href="index.php?module=shop&action=shop"
+                                 class="<?php echo isset($_GET['module']) && $_GET['module'] == 'mesItems' ? 'link_active' : '' ?>">Shop</a>
             <li class="liste"><a href="index.php?module=equipage&action=equipage"
                                 class="<?php echo isset($_GET['module']) && $_GET['module'] == 'equipage' ? 'link_active' : '' ?>">Equipage</a>
-
-        </li>
+            </li>
             <li class="liste"><a href="index.php?module=apropos&action=apropos"
                                  class="<?php echo isset($_GET['module']) && $_GET['module'] == 'apropos' ? 'link_active' : '' ?>">A Propos</a>
             </li>

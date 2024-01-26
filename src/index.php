@@ -40,9 +40,18 @@ switch ($module) {
         $moduleClass = 'ModuleEquipage';
         break;
     case 'amis':
-                $moduleFile = './modules/amis/module_amis.php';
-                $moduleClass = 'ModAmis';
-                break;
+        $moduleFile = './modules/amis/module_amis.php';
+        $moduleClass = 'ModAmis';
+        break;
+    case 'mesItems':
+        $moduleFile = './modules/mesItems/module_items.php';
+        $moduleClass = 'ModuleItems';
+        break;
+    case 'shop':
+        $moduleFile = './modules/shop/module_mesItems.php';
+        $moduleClass = 'ModuleMesItems';
+        break;
+
 }
 
 if (file_exists($moduleFile)) {
