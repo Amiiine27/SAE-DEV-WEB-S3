@@ -48,8 +48,8 @@ switch ($module) {
         $moduleClass = 'ModuleItems';
         break;
     case 'shop':
-        $moduleFile = './modules/shop/module_mesItems.php';
-        $moduleClass = 'ModuleMesItems';
+        $moduleFile = './modules/shop/module_shop.php';
+        $moduleClass = 'ModuleShop';
         break;
 
 }

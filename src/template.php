@@ -28,7 +28,7 @@
                                  class="<?php echo isset($_GET['module']) && $_GET['module'] == 'map' ? 'link_active' : '' ?>">Map</a>
             </li>
             <li class="liste"><a href="index.php?module=shop&action=shop"
-                                 class="<?php echo isset($_GET['module']) && $_GET['module'] == 'mesItems' ? 'link_active' : '' ?>">Shop</a>
+                                 class="<?php echo isset($_GET['module']) && $_GET['module'] == 'shop' ? 'link_active' : '' ?>">Shop</a>
             <li class="liste"><a href="index.php?module=equipage&action=equipage"
                                 class="<?php echo isset($_GET['module']) && $_GET['module'] == 'equipage' ? 'link_active' : '' ?>">Equipage</a>
             </li>

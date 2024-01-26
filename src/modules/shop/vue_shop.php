@@ -15,7 +15,7 @@ class VueShop extends VueGenerique
         <?php
     }
 
-    public function welcome()
+    public function welcome($arrayItem)
     {
         ?>
         <div class="page">
@@ -52,16 +52,22 @@ class VueShop extends VueGenerique
 
 
                     <section id="shop">
-                        <div class="itemCard homme">
-                            <img src="../../../images/shop/luffyDEV.gif">
-                            <div class="menu">
-                                TODO recuperer le prix dans la bd et juste l'afficher ici pour chaque item
-                                <a href="index.php?module=shop&action=acheter&id_item=1"> ACHETER </a>
+                        <?php
+
+                        foreach($arrayItem as $item) {
+                            ?>
+                            <div class="itemCard homme">
+                                <img src="../../../images/shop/<?php echo $item['img_item'] ?>">
+                                <div class="menu">
+                                    <a href="index.php?module=shop&action=acheter&id_item=<?php echo $item['idItem'] ?>"> ACHETER </a>
+                                </div>
                             </div>
-                        </div>
+                            <?php
+                        }
+                        ?>
                         <div class="itemCard homme">
                             <img src="../../../images/shop/zoroDev.gif">
-                            <a href="index.php?module=shop&action=acheter&id_item=2"> ACHETER </a>
+                            <a href="index.php?module=shop&action=acheter&id_item="> ACHETER </a>
                         </div>
                         <div class="itemCard homme">
                             <img src="../../../images/shop/sanjiDev.gif">

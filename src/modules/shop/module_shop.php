@@ -11,11 +11,11 @@ class ModuleShop
         $this->controller = new ControllerShop();
 
         switch ($this->controller->getAction()) {
-            case 'mesItems':
-                $this->controller->afficher();
-                break;
             case 'acheter':
                 $this->controller->acheter();
+                break;
+            case 'shop':
+                $this->controller->afficher();
                 break;
         }
     }

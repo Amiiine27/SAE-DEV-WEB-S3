@@ -14,11 +14,16 @@ class ControllerShop{
     public function __construct(){
         $this->modele = new ModeleShop();
         $this->vue = new VueShop();
-        $this->action = isset($_GET['action'])?? 'mesItems';
+        $this->action = $_GET['action'] ?? 'shop';
+    }
+
+    public function getItem(){
+        $id_item = $_GET["id_item"];
+        return $id_item;
     }
 
     public function afficher(){
-        $this->vue->welcome();
+        $this->vue->welcome($this->modele->getItem());
     }
 
     
@@ -33,7 +38,7 @@ class ControllerShop{
 
     public function acheter()
     {
-        $this->modele->acheter();
+        $this->modele->acheter($this->getItem());
         $this->vue->acheter();
     }
 
