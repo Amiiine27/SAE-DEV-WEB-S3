@@ -28,7 +28,7 @@
             <li class="liste"><a href="index.php?module=map&action=main_map"
                                  class="<?php echo isset($_GET['module']) && $_GET['module'] == 'map' ? 'link_active' : '' ?>">Map</a>
             </li>
-            <li class="liste"><a href="#">Shop</a></li>
+            
             <li class="liste"><a href="index.php?module=equipage&action=equipage"
                                  class="<?php echo isset($_GET['module']) && $_GET['module'] == 'equipage' ? 'link_active' : '' ?>">Equipage</a>
 
@@ -47,7 +47,7 @@
                                      class="<?php echo isset($_GET['module']) && $_GET['module'] == 'scores' ? 'link_active' : '' ?>">Scores</a>
                 </li>
                 <?php
-                echo ' <li class="liste"><a href="#">Mes items</a></li>';
+                //echo ' <li class="liste"><a href="#">Mes items</a></li>';
                 echo ' <li class="liste"><a href="index.php?module=amis&action=mes_amis">Amis</a></li>';
                 ?>
                 <li class="liste"><a href="index.php?module=profile&action=main_profile"
