@@ -71,7 +71,7 @@
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.55);
     position: fixed;
     z-index: 999;
-    width: 100vw;
+    width: 100%;
     height: 88px;
     background-color: var(--primary-color);
     top: 0;
@@ -89,12 +89,18 @@
 
 form .button_déconnexion {
     position: relative;
-    top: 18px;
     right: 71px;
+    padding: 5px;
+    border: none;
+    transition: background-color 0.2s ease-in;
+}
+
+form .button_déconnexion:hover {
+    background-color: #b1a500;
 }
 
 form .hamburger-menu {
-    top: -37px !important;
+    top: -30px !important;
 }
 
 .hamburger-menu div {
@@ -176,7 +182,8 @@ form .hamburger-menu {
 
 .propos {
     padding-top: 120px;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     text-align: center;
     background-color: var(--primary-color);
 }
@@ -187,6 +194,16 @@ form .hamburger-menu {
     font-size: 32px;
     font-family: 'Krona One', sans-serif;
     padding-top: 10px;
+}
+
+.propos hr {
+
+    width: 110%;
+    margin-left: -5%;
+    color: white;
+    z-index: 1;
+
+
 }
 
 
@@ -211,13 +228,31 @@ form .hamburger-menu {
 
 }
 
+.propos .propos_para .image_team .pics {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+    margin: 15px;
+    border: solid var(--yellow) 5px;
+}
+
+.propos .propos_para .image_team .coll {
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    text-align: center;
+    align-content: center;
+}
+
 /*-----------------------------------------------------------------------------------------*/
 /*------------------------------------------- EQUIPAGE -----------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
 
 .equipage {
     padding-top: 95px;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     text-align: center;
     background-color: var(--primary-color);
 }
@@ -227,16 +262,14 @@ form .hamburger-menu {
     text-transform: uppercase;
     font-size: 50px;
     font-family: 'Krona One', sans-serif;
-    padding-left: 450px;
-    padding-right: 450px;
-    padding-top: 120px;
-    padding-bottom: 50px;
+    padding: 120px 450px 50px;
 }
 
 .equipage h2 {
     font-size: 30px;
     font-family: 'Krona One', sans-serif;
     color: var(--yellow);
+    margin-bottom: 0;
 
 }
 
@@ -247,16 +280,19 @@ form .hamburger-menu {
     padding: 10px;
 }
 
+.equipage .equipage_item .equipage_logo {
+    width: 300px;
+}
+
 .equipage .equipage_item .itemRight {
     flex-direction: column;
 }
 
 .equipage hr {
-    height: 100vh;
-    width: .5vw;
-    border-width: 0;
-    color: var(--yellow);
-    background-color: var(--yellow);
+    width: 110%;
+    margin-left: -5%;
+    color: white;
+    z-index: 1;
 }
 
 
@@ -274,7 +310,6 @@ form .hamburger-menu {
 .equipageCreation {
     padding-top: 95px;
     height: 100vh;
-    text-align: center;
     background-color: var(--primary-color);
     align-items: center;
     justify-content: center;
@@ -298,12 +333,15 @@ form .hamburger-menu {
     font-family: 'Krona One', sans-serif;
     flex-direction: column;
     border-color: aliceblue;
+    width: 800px;
+    max-width: none;
 }
 
-.equipageCreation .champs {
+.equipageCreation form input:not([type='file']) {
     margin-bottom: 30px;
-    text-align: start;
-
+    padding: 5px;
+    background-color: var(--dark-black);
+    width: 100%;
 }
 
 .equipage .affiche_clan {
@@ -313,16 +351,34 @@ form .hamburger-menu {
     flex-direction: column;
     text-align: start;
     margin-left: 300px;
+    margin-top: 50px;
 }
 
-.equipage .affiche_clan .rejoindre {
-    font-size: 20px;
-    background-color: var(--primary-color);
+.equipage .affiche_clan .rejoindre button {
+    font-size: 17px;
+    background-color: var(--yellow);
+    border: none;
     font-family: 'Krona One', sans-serif;
-    color: var(--text-color);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px;
+    padding: 8px;
+    margin-top: 15px;
+    transition: background-color 0.2s ease-in;
+}
+
+.equipage .affiche_clan .rejoindre button:hover {
+    background-color: #b1a500;
+}
+
+.equipage .clan_infos p {
+    color: #fff;
+}
+
+.equipage .deviseClan {
+    color: #fff;
+}
+
+.equipage .affiche_clan div img {
+    width: 200px;
+    height: 200px;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -856,6 +912,8 @@ form input {
     height: 100vh;
     width: 100%;
     background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
 }
 
 .profile h1 {
@@ -906,7 +964,7 @@ form input {
     color: #535353;
 }
 
-.profile_form form label img {
+.profile_form form .profile_label_image .profile_image_avatar {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -914,6 +972,18 @@ form input {
     box-shadow: 0 0 5px rgba(255, 222, 0, 0.3);
     margin: 0 auto 20px auto;
     display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.profile_form form label .profile_image_camera {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 34%;
+    left: 56%;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -954,11 +1024,154 @@ form input {
     text-align: center;
 }
 
+.profile_form .profile_change_password {
+    color: var(--yellow);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+.profile_change_password_section {
+    height: 100vh;
+    padding-top: 88px;
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.profile_change_password_section form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 80%;
+    height: 600px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--dark-black);
+}
+
+.profile_change_password_section form h1 {
+    color: var(--yellow);
+    font-family: 'Krona One', sans-serif;
+}
+
+.profile_change_password_section form label, .profile_change_password_section form input {
+    width: 100%;
+    text-align: left;
+}
+
+.profile_change_password_section form label {
+    font-size: 15px;
+    color: #c7c7c7;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+.profile_change_password_section form input {
+    padding: 15px 0;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+
+.profile_change_password_section form input::placeholder {
+    color: #535353;
+}
+
+.profile_change_password_section form button {
+    padding: 15px;
+    background-color: var(--yellow);
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in;
+}
+
+.profile_change_password_section form button:hover {
+    background-color: #b1a500;
+}
+
+.profile_anchor_left {
+    position: absolute;
+    top: 10%;
+    left: -75px;
+}
+
+.profile_anchor_right {
+    position: absolute;
+    bottom: 5%;
+    right: -75px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*----------------------------------------- SCORES ----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.scores {
+    min-height: 100vh;
+    height: 100%;
+    background-color: var(--primary-color);
+    padding: 88px 0;
+}
+
+.scores h1 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'Krona One', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.scores .score_none_games {
+    text-align: center;
+    font-weight: 500;
+    color: var(--yellow);
+    margin-top: 200px;
+}
+
+.scores .score_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+    padding: 60px;
+    position: relative;
+    background: linear-gradient(to bottom, rgb(10, 10, 10), rgb(0, 0, 0));
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    margin: 125px 150px 15px 250px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.scores .score_item .score_id {
+    font-family: 'Krona One', sans-serif;
+    font-size: 2rem;
+}
+
+.scores .score_item img {
+    position: absolute;
+    left: -550px;
+    width: 500px;
+}
+
 /*-----------------------------------------------------------------------------------------*/
 /*--------------------------------------- RESPONSIVE --------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1730px) {
     /* NAVBAR */
     .navigation-bar {
         position: relative;
@@ -1003,7 +1216,9 @@ form input {
     .navigation-bar .right a img {
         width: 15px;
     }
+}
 
+@media screen and (max-width: 1250px) {
     /* WELCOME */
     .welcome .welcome_text {
         position: absolute;
@@ -1089,6 +1304,15 @@ form input {
     .encyclopedia_odd .encyclopedia_images_main .encyclopedia_rectangle_dot {
         left: 50%;
     }
+
+    /* PROFILE */
+    .profile_anchor_left {
+        display: none;
+    }
+
+    .profile_anchor_right {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1180px) {
@@ -1137,6 +1361,44 @@ form input {
     .map_info .map_info_anchor_left {
         width: 300px;
         bottom: -25px;
+    }
+
+    /* PROFILE */
+    .profile_form {
+        width: 400px;
+        padding: 10px;
+    }
+
+    .profile_form form label img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile_form form .profile_label_image .profile_image_camera {
+        left: 63%;
+    }
+
+    /* SCORES */
+    .scores .score_item img {
+        display: none;
+    }
+
+    .scores .score_item {
+        gap: 30px;
+        padding: 30px;
+        width: 90%;
+        margin: 25px auto;
+        font-size: 12px;
+    }
+
+    /* EQUIPAGE */
+    .equipageCreation h1 {
+        font-size: 26px;
+        padding: 50px 0;
+    }
+
+    .equipageCreation form {
+        width: 400px;
     }
 }
 
@@ -1253,6 +1515,97 @@ form input {
     border-radius: 2px;
 }
 
+.Ajout_amis{
+    position: relative;
+    float: right;
+    margin-top: -331px;
+    margin-right: 175px;
+}
+
+.barre_recherche{
+    border-color: #fff;
+    width: 91%;
+    border-width: 1px;
+    margin-left: 5px;
+    margin-top: -23px;
+}
+.img_barre_recherche{
+    background: url('../images/Amis/loupe.png') no-repeat; /* Remplacez 'chemin/vers/votre/image.png' par le chemin réel de votre image */
+    width: 50px;
+    border: none; /* Supprime la bordure du bouton */
+    cursor: pointer;
+}
+
+.Ajouter_amis{
+    display: flex;
+    justify-content: flex-end;
+}
+.amis_separe{
+    border-color: #fff;
+    width: 35%;
+    border-width: 2px;
+    border-left: 2px;
+    border: none;
+    height: 100px;
+
+}
+
+.container_ajoutAmis{
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+  }
+
+  .button_ajoutAmis{
+    color : var(--primary-color);
+    background-color: var(--yellow);
+    border-radius: 3px;
+    border-color:  var(--yellow);
+}
+
+.container_buttonAjout{
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+.separate_ajoutAmis{
+        border-color: #fff;
+        width: 35%;
+        border-width: 2px;
+        margin-left: 15px;
+}
+
+/*
+<div class="Ajout_amis">
+    <div class="container_subtitle_MesAmis">
+        <h3 class="subtitle_mesAmis">Ajouter des amis</h3>
+    </div>
+
+<?php
+
+foreach ($JoueurArray as $joueur) {
+?>
+<div class="container_Ajoutamis" id="ajout_</*?php echo $joueur['idJoueur'] ?? ''; ?>">
+    <div class="profil">
+        <img class="profil_amis" src="../assets/logo.png" alt="image joueur">
+    </div>
+    <div class="attribut">
+        <p class="attr_amis"></*?php echo $joueur['username'] ?? ''; ?></p>
+        <p class="attr_amis"></*?php echo $joueur['money'] ?? ''; ?></p>
+    </div>
+    <div class="container_buttonAjout">
+        <form action="index.php?module=amis&action=ajout_amis" method="post">
+            <input type="hidden" name="ajout_id" value="</*?php echo $joueur['idJoueur'] ?? ''; ?>">
+            <button class="button_ajoutAmis" type="submit" name="submit">Ajout</button>
+        </form>
+    </div>
+</div>
+<hr class="separate_ajoutAmis" id="</*?php echo $joueur['idJoueur'] ?? ''; ?>">
+-->
+<?php
+}
+
+*/
 
 /*-----------------------------------------------------------------------------------------*/
 /*------------------------------------------ Shop -----------------------------------------*/

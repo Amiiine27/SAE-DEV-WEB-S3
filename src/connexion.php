@@ -8,6 +8,11 @@ class Connexion
     protected static  $dbuser = "dutinfopw201613";
     protected static  $dbpasswd = "hymunupy";
 
+    public function __construct() {
+        // Appel à initConnexion lors de l'instanciation de la classe
+        self::initConnexion();
+    }
+
     public static function initConnexion(): void
     {
         try {
@@ -20,6 +25,7 @@ class Connexion
     }
 
     public static function getBdd(){
-        return Connexion::$bdd;
+        return self::$bdd;
     }
 }
+

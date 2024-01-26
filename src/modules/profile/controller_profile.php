@@ -31,13 +31,38 @@ class ControllerProfile
         $this->vue->mainProfile($this->model->getUser($_SESSION['identifiant_utilisateur']));
     }
 
-    public function changeProfile() {
+    public function changeProfile()
+    {
         $error = $this->model->changeProfile();
         if ($error) {
             $this->vue->changeProfileError();
-        } 
-        else {
+        } else {
             $this->vue->changeProfile();
         }
+    }
+
+    public function changePassword()
+    {
+        $this->vue->changePassword();
+    }
+
+    public function submitPassword()
+    {
+        $this->model->submitPassword();
+    }
+
+    public function actualPasswordError()
+    {
+        $this->vue->actualPasswordError();
+    }
+
+    public function passwordConfirmError()
+    {
+        $this->vue->passwordConfirmError();
+    }
+
+    public function passwordChangeSuccess()
+    {
+        $this->vue->passwordChangeSuccess();
     }
 }
