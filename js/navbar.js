@@ -1,4 +1,3 @@
-/*
 const button = document.querySelector('.hamburger-menu');
 const navbar = document.querySelector('.navigation-bar ul');
 
@@ -14,5 +13,3 @@ changeStateNavbar = () => {
     }
 }
 button.addEventListener('click', changeStateNavbar);
-
-*/
