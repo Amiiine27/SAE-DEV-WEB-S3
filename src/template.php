@@ -111,7 +111,7 @@
                     <div class="connexion">
                         <button class="buttonSubmit" type='submit' name='submit'>Se connecter</button>
                 </form>
-                <div class="right">
+                <div class="right button-inscrire">
                     <a href='#' class="open-modal" onclick="openModalInscription()">S'inscrire</a>
                 </div>
             </div>

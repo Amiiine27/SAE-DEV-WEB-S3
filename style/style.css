@@ -217,8 +217,8 @@ form .hamburger-menu {
 .propos .propos_para p {
     font-size: 20px;
     color: var(--text-color);
-    padding-left: 250px;
-    padding-right: 250px;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 25px;
 
 }
@@ -235,6 +235,7 @@ form .hamburger-menu {
     margin-top: 25px;
     margin: 15px;
     border: solid var(--yellow) 5px;
+    object-fit: cover;
 }
 
 .propos .propos_para .image_team .coll {
@@ -262,7 +263,6 @@ form .hamburger-menu {
     text-transform: uppercase;
     font-size: 50px;
     font-family: 'Krona One', sans-serif;
-    padding: 120px 450px 50px;
 }
 
 .equipage h2 {
@@ -322,8 +322,7 @@ form .hamburger-menu {
     text-transform: uppercase;
     font-size: 50px;
     font-family: 'Krona One', sans-serif;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 50px 0;
 }
 
 .equipageCreation form {
@@ -350,8 +349,9 @@ form .hamburger-menu {
     font-family: 'Krona One', sans-serif;
     flex-direction: column;
     text-align: start;
-    margin-left: 300px;
-    margin-top: 50px;
+    display: block;
+    margin: 50px auto 0 auto;
+    width: 80%;
 }
 
 .equipage .affiche_clan .rejoindre button {
@@ -1331,6 +1331,16 @@ form input {
 }
 
 @media screen and (max-width: 950px) {
+    /* CONNEXION */
+    .modal-content {
+        width: 90% !important;
+    }
+
+    .modal-content form .connexion .button-inscrire a {
+        margin: 0;
+    }
+
+    /* MAP */
     .map_info {
         flex-direction: column;
         height: 100%;
@@ -1399,6 +1409,14 @@ form input {
 
     .equipageCreation form {
         width: 400px;
+    }
+
+    .equipage h1 {
+        font-size: 30px;
+    }
+
+    .equipage .equipage_item img {
+        width: 300px;
     }
 }
 
